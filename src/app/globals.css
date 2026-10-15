@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-cairo: 'Cairo', sans-serif;
+  --font-amiri: 'Amiri', serif;
+}
+
+body {
+  font-family: var(--font-cairo);
+  background-color: #fdfcf9;
+  color: #1a202c;
+  direction: rtl;
+  text-align: right;
+  overflow-x: hidden;
+}
+
+/* Islamic Geometric Subtle Background Pattern */
+.bg-islamic-pattern {
+  background-color: #064e3b;
+  background-image: radial-gradient(rgba(212, 175, 55, 0.12) 1px, transparent 1px), radial-gradient(rgba(212, 175, 55, 0.08) 1px, #064e3b 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+.bg-pattern-light {
+  background-color: #faf9f5;
+  background-image: radial-gradient(rgba(6, 78, 59, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Gold Gradient Effects */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #d4af37 0%, #f6e05e 50%, #c59b27 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #d4af37 0%, #e2be4b 50%, #c59b27 100%);
+}
+
+.border-gold-gradient {
+  border-image: linear-gradient(135deg, #d4af37, #f6e05e, #c59b27) 1;
+}
+
+/* Smooth Scrolling & Custom Scrollbar */
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #064e3b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #043629;
+}

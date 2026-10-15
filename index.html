@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>وكالة رفيق الخير للسفر والسياحة | رحلات وعروض العمرة من المغرب</title>
+  <meta name="description" content="وكالة أسفار مغربية متخصصة في تنظيم وتسويق رحلات العمرة من المغرب إلى مكة المكرمة والمدينة المنورة. عروض عمرة شعبان ورمضان، عمرة تركيا، فنادق قريبة من الحرمين وطيران مباشر.">
+  
+  <!-- Google Fonts: Cairo & Amiri -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              800: '#065f46',
+              900: '#064e3b',
+              950: '#022c22',
+            },
+            gold: {
+              400: '#fbbf24',
+              500: '#d4af37',
+              600: '#c59b27',
+              700: '#a17a1a',
+            }
+          },
+          fontFamily: {
+            cairo: ['Cairo', 'sans-serif'],
+            amiri: ['Amiri', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #fdfcf9;
+      color: #1a202c;
+    }
+    .bg-islamic-pattern {
+      background-color: #064e3b;
+      background-image: radial-gradient(rgba(212, 175, 55, 0.15) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+    .bg-gold-gradient {
+      background: linear-gradient(135deg, #d4af37 0%, #f3ce57 50%, #c59b27 100%);
+    }
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #d4af37 0%, #f6e05e 50%, #c59b27 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .shadow-gold {
+      box-shadow: 0 4px 20px -2px rgba(212, 175, 55, 0.3);
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-gold-500 selection:text-white min-h-screen flex flex-col">
+
+  <!-- ================= TOP BAR ================= -->
+  <div class="bg-primary-950 text-white text-xs py-2 px-4 sm:px-8 border-b border-gold-500/20">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-4 sm:gap-6 flex-wrap">
+        <div class="flex items-center gap-1.5 text-gold-400 font-semibold">
+          <i class="fa-solid fa-shield-halved text-gold-400"></i>
+          <span>وكالة أسفار مرخصة ومعتمدة لتنظيم رحلات العمرة بالمغرب (ترخيص: LIC-MOR-2024-8841)</span>
+        </div>
+        <div class="hidden md:flex items-center gap-1.5 text-emerald-200/80">
+          <i class="fa-regular fa-clock"></i>
+          <span>خدمة المعتمرين على مدار 24 ساعة</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="tel:0662574740" class="flex items-center gap-1.5 text-white hover:text-gold-300 font-bold tracking-wide">
+          <i class="fa-solid fa-phone text-gold-400"></i>
+          <span dir="ltr">0662 57 47 40</span>
+        </a>
+        <span class="text-emerald-800">|</span>
+        <a href="https://wa.me/212662574740?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%B9%D8%B1%D9%88%D8%B6%20%D8%A7%D9%84%D8%B9%D9%85%D8%B1%D8%A9" target="_blank" class="flex items-center gap-1.5 text-emerald-300 hover:text-emerald-200 font-semibold">
+          <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+          <span>واتساب الوكالة</span>
+        </a>
+        <span class="text-emerald-800">|</span>
+        <button onclick="openAdminModal()" class="text-slate-300 hover:text-gold-300 text-[11px] flex items-center gap-1">
+          <i class="fa-solid fa-lock text-gold-400/80"></i>
+          <span>لوحة الإدارة</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="w-full sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-gold-200/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 py-3.5 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="inline-flex items-center gap-3 group select-none">
+        <div class="relative flex items-center justify-center rounded-xl bg-gradient-to-br from-primary-900 to-primary-950 text-gold-400 ring-2 ring-primary-700/50 w-11 h-11 shadow-md">
+          <span class="font-bold text-xl font-amiri text-gold-400">RA</span>
+          <i class="fa-solid fa-plane-departure text-[10px] text-gold-400 absolute top-1 left-1 transform -rotate-12"></i>
+        </div>
+        <div class="flex flex-col text-right">
+          <div class="flex items-center gap-1.5">
+            <span class="font-extrabold text-2xl tracking-tight text-primary-950 font-cairo">رفـيـق الـخـيـر</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-gold-500"></span>
+          </div>
+          <div class="flex items-center justify-between gap-1 text-[10px] tracking-wider font-semibold">
+            <span class="text-gold-700">RAFIQ AL KHAIR</span>
+            <span class="text-slate-500">للسفر والسياحة</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-bold text-slate-700">
+        <a href="#hero" class="px-3.5 py-2 rounded-lg text-primary-900 bg-primary-50">الرئيسية</a>
+        <a href="#packages" class="px-3.5 py-2 rounded-lg hover:text-primary-900 hover:bg-slate-50">عروض العمرة</a>
+        <a href="#features" class="px-3.5 py-2 rounded-lg hover:text-primary-900 hover:bg-slate-50">لماذا رفيق الخير؟</a>
+        <a href="#hotels" class="px-3.5 py-2 rounded-lg hover:text-primary-900 hover:bg-slate-50">فنادق الإقامة</a>
+        <a href="#reviews" class="px-3.5 py-2 rounded-lg hover:text-primary-900 hover:bg-slate-50">آراء المعتمرين</a>
+        <button onclick="openTrackerModal()" class="px-3.5 py-2 rounded-lg hover:text-primary-900 hover:bg-slate-50 text-emerald-800">تتبع حجزك</button>
+        <a href="#contact" class="px-3.5 py-2 rounded-lg hover:text-primary-900 hover:bg-slate-50">اتصل بنا</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="flex items-center gap-3">
+        <a href="#packages" class="px-5 py-2.5 rounded-xl bg-gold-gradient text-slate-950 font-bold text-sm shadow-gold hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+          <i class="fa-solid fa-compass ml-1.5"></i>
+          <span>استكشف الرحلات</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section id="hero" class="relative min-h-[580px] lg:min-h-[660px] flex items-center justify-center bg-slate-950 overflow-hidden text-white">
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=2000&q=85" alt="الكعبة المشرفة" class="w-full h-full object-cover opacity-35 scale-105">
+      <div class="absolute inset-0 bg-gradient-to-t from-[#064e3b] via-black/75 to-black/85"></div>
+      <div class="absolute inset-0 bg-islamic-pattern opacity-30"></div>
+    </div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-8 py-16 text-center space-y-7">
+      <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-emerald-950/80 border border-gold-400/40 backdrop-blur-md shadow-lg">
+        <span class="w-2 h-2 rounded-full bg-gold-400 animate-ping"></span>
+        <span class="text-gold-300 text-xs sm:text-sm font-bold">وكالة رفيق الخير للسفر والسياحة - خياركم الموثوق لرحلة العمرة بالمغرب</span>
+        <i class="fa-solid fa-shield-halved text-gold-400"></i>
+      </div>
+
+      <div class="space-y-4 max-w-4xl mx-auto">
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight font-cairo leading-tight sm:leading-tight">
+          رحلتك إلى بيت الله الحرام تبدأ من هنا
+        </h1>
+        <p class="text-base sm:text-xl text-emerald-100/90 max-w-3xl mx-auto font-light leading-relaxed">
+          اكتشف عروض العمرة من المغرب، واختر البرنامج الذي يناسب ميزانيتك وتطلعاتك، واستعد لرحلة إيمانية منظمة بكل عناية واهتمام.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 pt-2">
+        <a href="#packages" class="px-8 py-3.5 rounded-2xl bg-gold-gradient text-slate-950 font-black text-sm sm:text-base shadow-gold hover:shadow-2xl transition-all transform hover:-translate-y-1">
+          <span>اكتشف عروض العمرة</span>
+          <i class="fa-solid fa-chevron-left mr-1.5"></i>
+        </a>
+        <button onclick="openBookingModal('pkg-shaban-ramadan', 'عمرة شعبان ورمضان المباركة 1446', 18500)" class="px-7 py-3.5 rounded-2xl bg-primary-900/90 hover:bg-primary-800 text-white border border-gold-400/40 font-bold text-sm sm:text-base backdrop-blur-md transition-all">
+          <i class="fa-solid fa-kaaba text-gold-400 ml-1.5"></i>
+          <span>احجز رحلتك الآن</span>
+        </button>
+        <a href="https://wa.me/212662574740?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%B9%D8%B1%D9%88%D8%B6%20%D8%A7%D9%84%D8%B9%D9%85%D8%B1%D8%A9" target="_blank" class="px-6 py-3.5 rounded-2xl bg-emerald-600/80 hover:bg-emerald-600 text-white font-bold text-sm sm:text-base backdrop-blur-md transition-all">
+          <i class="fa-brands fa-whatsapp ml-1.5"></i>
+          <span>تواصل عبر واتساب</span>
+        </a>
+      </div>
+
+      <div class="pt-8 border-t border-emerald-900/40 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-gold-400 font-cairo">100%</div>
+          <div class="text-xs text-emerald-200/80">تأطير ديني وإداري معتمد</div>
+        </div>
+        <div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-gold-400 font-cairo">150 - 450 م</div>
+          <div class="text-xs text-emerald-200/80">مسافة الفنادق عن الحرمين</div>
+        </div>
+        <div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-gold-400 font-cairo">مباشر</div>
+          <div class="text-xs text-emerald-200/80">طيران منتظم من الدار البيضاء</div>
+        </div>
+        <div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-gold-400 font-cairo">24 / 7</div>
+          <div class="text-xs text-emerald-200/80">متابعة ميدانية في مكة والمدينة</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SEARCH ENGINE ================= -->
+  <div class="w-full max-w-5xl mx-auto -mt-12 relative z-30 px-4 sm:px-6">
+    <div class="bg-white/95 backdrop-blur-xl p-6 sm:p-8 rounded-3xl shadow-2xl border border-gold-200/60 ring-1 ring-gold-400/20">
+      <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
+        <div class="flex items-center gap-2 text-primary-950 font-bold text-sm sm:text-base">
+          <i class="fa-solid fa-magnifying-glass text-gold-500"></i>
+          <span>محرك البحث عن برامج العمرة المعتمدة</span>
+        </div>
+        <span class="text-xs text-slate-500 hidden sm:inline">أسعار شاملة ومحدثة بالدرهم المغربي (MAD)</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="space-y-1">
+          <label class="text-xs font-bold text-slate-700">مدينة الانطلاق</label>
+          <select id="searchCity" class="w-full text-xs font-semibold p-3 rounded-xl border border-slate-200 bg-slate-50">
+            <option value="all">كافة المدن (الدار البيضاء أساسي)</option>
+            <option value="casablanca">الدار البيضاء (مطار محمد الخامس)</option>
+            <option value="rabat">الرباط</option>
+            <option value="marrakech">مراكش</option>
+            <option value="fes">فاس</option>
+          </select>
+        </div>
+        <div class="space-y-1">
+          <label class="text-xs font-bold text-slate-700">الموسم / فئة البرنامج</label>
+          <select id="searchCategory" class="w-full text-xs font-semibold p-3 rounded-xl border border-slate-200 bg-slate-50" onchange="filterPackages()">
+            <option value="all">كافة البرامج والمواسم</option>
+            <option value="ramadan">عمرة شعبان ورمضان 1446</option>
+            <option value="turkey">عمرة عبر تركيا (إسطنبول والحرمين)</option>
+            <option value="eco">البرنامج الاقتصادي والمتوسط</option>
+          </select>
+        </div>
+        <div class="space-y-1">
+          <label class="text-xs font-bold text-slate-700">نوع الغرفة</label>
+          <select id="searchRoom" class="w-full text-xs font-semibold p-3 rounded-xl border border-slate-200 bg-slate-50">
+            <option value="all">كافة الغرف</option>
+            <option value="double">غرفة ثنائية</option>
+            <option value="triple">غرفة ثلاثية</option>
+            <option value="quad">غرفة رباعية</option>
+            <option value="quint">غرفة خماسية</option>
+          </select>
+        </div>
+        <div class="flex flex-col justify-end">
+          <a href="#packages" onclick="filterPackages()" class="w-full py-3 rounded-xl bg-gold-gradient text-slate-950 font-extrabold text-xs text-center shadow-gold hover:opacity-95 transition-all">
+            <i class="fa-solid fa-magnifying-glass ml-1"></i>
+            <span>تصفية العروض المتاحة</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= PACKAGES CATALOG (REAL DATA FROM FLYERS) ================= -->
+  <section id="packages" class="py-20 max-w-7xl mx-auto px-4 sm:px-8 space-y-12">
+    <div class="text-center space-y-3 max-w-2xl mx-auto">
+      <span class="text-xs font-bold text-gold-700 bg-gold-100 px-3.5 py-1 rounded-full">
+        عروض معتمدة وموثقة بالأسعار
+      </span>
+      <h2 class="text-2xl sm:text-4xl font-black text-primary-950 font-cairo">
+        عروض رحلات العمرة لعام 1446 / 2026
+      </h2>
+      <p className="text-slate-600 text-xs sm:text-sm">
+        جميع العروض مستخرجة من البرامج الرسمية لوكالة رفيق الخير مع تفصيل الأسعار حسب الغرف
+      </p>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="packagesGrid">
+      
+      <!-- Card 1: عمرة شعبان ورمضان -->
+      <div class="pkg-card bg-white rounded-3xl overflow-hidden border border-gold-300 shadow-luxury flex flex-col justify-between" data-category="ramadan">
+        <div>
+          <div class="relative h-64 w-full bg-slate-900 overflow-hidden">
+            <img src="./public/images/packages/shaban-ramadan.jpg" alt="عمرة شعبان ورمضان" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div class="absolute top-4 right-4 bg-gold-gradient text-slate-950 px-3 py-1 rounded-full text-xs font-black shadow">
+              موسم شعبان ورمضان
+            </div>
+            <div class="absolute top-4 left-4 bg-black/60 text-white px-3 py-1 rounded-full text-xs">
+              22 يوماً
+            </div>
+            <div class="absolute bottom-4 right-4 left-4 text-white">
+              <span class="text-xs text-emerald-300 font-bold block mb-1">الدار البيضاء ✈ جدة / المدينة</span>
+              <h3 class="text-xl font-extrabold text-white">عمرة شعبان ورمضان المباركة 1446</h3>
+            </div>
+          </div>
+
+          <div class="p-6 space-y-4">
+            <p class="text-xs text-slate-600 leading-relaxed">
+              عمرة مباركة رحلة إيمانية تعلّ القلب سعادة - تنظيم احترافي وتأطير متكامل مع فنادق قريبة من الحرمين.
+            </p>
+
+            <!-- Room selection buttons -->
+            <div class="space-y-1.5">
+              <span class="text-xs font-bold text-slate-700 block">أسعار الغرف للمعتمر:</span>
+              <div class="grid grid-cols-4 gap-1 text-center">
+                <div class="p-2 bg-emerald-50 rounded-xl border border-emerald-200">
+                  <div class="text-[10px] text-slate-500 font-bold">خماسية</div>
+                  <div class="text-xs font-black text-primary-950">18,500 د.م</div>
+                </div>
+                <div class="p-2 bg-slate-100 rounded-xl">
+                  <div class="text-[10px] text-slate-500 font-bold">رباعية</div>
+                  <div class="text-xs font-black text-slate-900">19,000 د.م</div>
+                </div>
+                <div class="p-2 bg-slate-100 rounded-xl">
+                  <div class="text-[10px] text-slate-500 font-bold">ثلاثية</div>
+                  <div class="text-xs font-black text-slate-900">19,500 د.م</div>
+                </div>
+                <div class="p-2 bg-slate-100 rounded-xl">
+                  <div class="text-[10px] text-slate-500 font-bold">ثنائية</div>
+                  <div class="text-xs font-black text-slate-900">20,500 د.م</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Features -->
+            <div class="space-y-1 text-xs text-slate-600">
+              <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-600"></i><span>تذاكر طيران مع الخطوط السعودية / المغربية</span></div>
+              <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-600"></i><span>إقامة فندقية مريحة بمكة والمدينة</span></div>
+              <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-600"></i><span>مواصلات مريحة ومرشدين ذوي خبرة</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 pt-0 space-y-3">
+          <div class="flex items-baseline justify-between border-t border-slate-100 pt-3">
+            <div>
+              <span class="text-[10px] text-slate-400 block">ابتداءً من:</span>
+              <span class="text-2xl font-black text-primary-950">18,500</span>
+              <span class="text-xs font-bold text-gold-700">درهم</span>
+            </div>
+            <span class="text-xs text-emerald-700 font-bold">شامل كافة الرسوم</span>
+          </div>
+
+          <div class="grid grid-cols-4 gap-2">
+            <button onclick="openBookingModal('pkg-shaban-ramadan', 'عمرة شعبان ورمضان المباركة 1446', 18500)" class="col-span-3 py-3 rounded-xl bg-gold-gradient text-slate-950 font-black text-xs shadow-gold hover:opacity-95">
+              احجز مقعدك الآن
+            </button>
+            <a href="https://wa.me/212662574740?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%B9%D9%85%D8%B1%D8%A9%20%D8%B4%D8%B9%D8%A8%D8%A7%D9%86%20%D9%88%D8%B1%D9%85%D8%B6%D8%A7%D9%86" target="_blank" class="col-span-1 py-3 rounded-xl bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center justify-center">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: عمرة الخريف (اقتصادي ومتوسط) -->
+      <div class="pkg-card bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between" data-category="eco">
+        <div>
+          <div class="relative h-64 w-full bg-slate-900 overflow-hidden">
+            <img src="./public/images/packages/nov-dec-2026.jpg" alt="عمرة الخريف" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div class="absolute top-4 right-4 bg-emerald-900 text-gold-300 px-3 py-1 rounded-full text-xs font-bold border border-gold-400/30">
+              برنامج اقتصادي ومتوسط
+            </div>
+            <div class="absolute top-4 left-4 bg-black/60 text-white px-3 py-1 rounded-full text-xs">
+              15 يوماً
+            </div>
+            <div class="absolute bottom-4 right-4 left-4 text-white">
+              <span class="text-xs text-emerald-300 font-bold block mb-1">الذهاب 21 نونبر - العودة 05 دجنبر 2026</span>
+              <h3 class="text-xl font-extrabold text-white">عمرة الخريف (أسكن / تاج بارك / الحياة)</h3>
+            </div>
+          </div>
+
+          <div class="p-6 space-y-4">
+            <p class="text-xs text-slate-600 leading-relaxed">
+              فندق أسكن بمكة / فندق تاج بارك + فندق الحياة الماسي بالمدينة المنورة. شامل التذاكر، التأشيرة، ومرافق ومرشد ديني.
+            </p>
+
+            <div class="space-y-1.5">
+              <span class="text-xs font-bold text-slate-700 block">أسعار البرنامج الاقتصادي:</span>
+              <div class="grid grid-cols-3 gap-1 text-center">
+                <div class="p-2 bg-emerald-50 rounded-xl border border-emerald-200">
+                  <div class="text-[10px] text-slate-500 font-bold">رباعية</div>
+                  <div class="text-xs font-black text-primary-950">14,500 د.م</div>
+                </div>
+                <div class="p-2 bg-slate-100 rounded-xl">
+                  <div class="text-[10px] text-slate-500 font-bold">ثلاثية</div>
+                  <div class="text-xs font-black text-slate-900">15,500 د.م</div>
+                </div>
+                <div class="p-2 bg-slate-100 rounded-xl">
+                  <div class="text-[10px] text-slate-500 font-bold">ثنائية</div>
+                  <div class="text-xs font-black text-slate-900">17,500 د.م</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-1 text-xs text-slate-600">
+              <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-600"></i><span>تذكرة سفر ذهاب وعودة من الدار البيضاء</span></div>
+              <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-600"></i><span>تأشيرة السعودية والتأمين الشامل</span></div>
+              <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-600"></i><span>التنقلات الداخلية ومرافق ديني طيلة الرحلة</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 pt-0 space-y-3">
+          <div class="flex items-baseline justify-between border-t border-slate-100 pt-3">
+            <div>
+              <span class="text-[10px] text-slate-400 block">ابتداءً من:</span>
+              <span class="text-2xl font-black text-primary-950">14,500</span>
+              <span class="text-xs font-bold text-gold-700">درهم</span>
+            </div>
+            <span class="text-xs text-emerald-700 font-bold">عربون 30% متاح</span>
+          </div>
+
+          <div class="grid grid-cols-4 gap-2">
+            <button onclick="openBookingModal('pkg-nov-dec', 'عمرة الخريف (البرنامج الاقتصادي والمتوسط)', 14500)" class="col-span-3 py-3 rounded-xl bg-gold-gradient text-slate-950 font-black text-xs shadow-gold hover:opacity-95">
+              احجز مقعدك الآن
+            </button>
+            <a href="https://wa.me/212662574740?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%B9%D9%85%D8%B1%D8%A9%20%D9%86%D9%88%D9%81%D9%85%D8%A8%D8%B1%20%D9%88%D8%AF%D8%AC%D9%86%D8%A8%D8%B1" target="_blank" class="col-span-1 py-3 rounded-xl bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center justify-center">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: عمرة عبر تركيا -->
+      <div class="pkg-card bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between" data-category="turkey">
+        <div>
+          <div class="relative h-64 w-full bg-slate-900 overflow-hidden">
+            <img src="./public/images/packages/turkey-umrah.jpg" alt="عمرة عبر تركيا" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div class="absolute top-4 right-4 bg-primary-950 text-gold-400 px-3 py-1 rounded-full text-xs font-bold border border-gold-400/40">
+              إسطنبول + مكة + المدينة
+            </div>
+            <div class="absolute top-4 left-4 bg-black/60 text-white px-3 py-1 rounded-full text-xs">
+              17 يوماً
+            </div>
+            <div class="absolute bottom-4 right-4 left-4 text-white">
+              <span class="text-xs text-emerald-300 font-bold block mb-1">الخطوط التركية من الدار البيضاء</span>
+              <h3 class="text-xl font-extrabold text-white">عمرة عبر تركيا (رحلة روحانية وتنظيم احترافي)</h3>
+            </div>
+          </div>
+
+          <div class="p-6 space-y-4">
+            <p class="text-xs text-slate-600 leading-relaxed">
+              إسطنبول (5 ليالٍ) + مكة (7 ليالٍ) + المدينة (4 ليالٍ). مع رويال اسطنبول بالإفطار، تاج بارك أو أنجم بمكة، ورويال المدينة.
+            </p>
+
+            <div class="space-y-1.5">
+              <span class="text-xs font-bold text-slate-700 block">أسعار البرنامج الأول (بالإفطار):</span>
+              <div class="grid grid-cols-3 gap-1 text-center">
+                <div class="p-2 bg-emerald-50 rounded-xl border border-emerald-200">
+                  <div class="text-[10px] text-slate-500 font-bold">رباعية</div>
+                  <div class="text-xs font-black text-primary-950">17,000 د.م</div>
+                </div>
+                <div class="p-2 bg-slate-100 rounded-xl">
+                  <div class="text-[10px] text-slate-500 font-bold">ثلاثية</div>
+                  <div class="text-xs font-black text-slate-900">18,500 د.م</div>
+                </div>
+                <div class="p-2 bg-slate-100 rounded-xl">
+                  <div class="text-[10px] text-slate-500 font-bold">ثنائية</div>
+                  <div class="text-xs font-black text-slate-900">20,500 د.م</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-1 text-xs text-slate-600">
+              <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-600"></i><span>تذكرة الطائرة مع الخطوط التركية من الدار البيضاء</span></div>
+              <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-600"></i><span>تصريح الروضة الشريفة متاح ومضمون</span></div>
+              <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-600"></i><span>جولات سياحية ومزارات مكة والمدينة</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 pt-0 space-y-3">
+          <div class="flex items-baseline justify-between border-t border-slate-100 pt-3">
+            <div>
+              <span class="text-[10px] text-slate-400 block">ابتداءً من:</span>
+              <span class="text-2xl font-black text-primary-950">17,000</span>
+              <span class="text-xs font-bold text-gold-700">درهم</span>
+            </div>
+            <span class="text-xs text-emerald-700 font-bold">الروضة متاحة ✓</span>
+          </div>
+
+          <div class="grid grid-cols-4 gap-2">
+            <button onclick="openBookingModal('pkg-turkey', 'عمرة عبر تركيا - إسطنبول ومكة والمدينة', 17000)" class="col-span-3 py-3 rounded-xl bg-gold-gradient text-slate-950 font-black text-xs shadow-gold hover:opacity-95">
+              احجز مقعدك الآن
+            </button>
+            <a href="https://wa.me/212662574740?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%B9%D9%85%D8%B1%D8%A9%20%D8%B9%D8%A8%D8%B1%20%D8%AA%D8%B1%D9%83%D9%8A%D8%A7" target="_blank" class="col-span-1 py-3 rounded-xl bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center justify-center">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= WHY CHOOSE US ================= -->
+  <section id="features" class="py-16 bg-slate-100/70 border-y border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-12">
+      <div class="text-center space-y-2">
+        <h2 class="text-2xl sm:text-3xl font-black text-primary-950 font-cairo">لماذا يفضل المعتمرون وكالة رفيق الخير؟</h2>
+        <p class="text-slate-600 text-xs sm:text-sm">أمانة، شفافية، وعناية تامة بضيوف الرحمن منذ الانطلاق وحتى العودة</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-800 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <h3 class="font-bold text-base text-slate-900">تأطير ديني وإرشادي متميز</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">يرافق الرحلة أساتذة ومرشدون دينيون لشرح المناسك خطوة بخطوة وإقامة دروس وتوجيهات في الحرمين.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-800 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-hotel"></i>
+          </div>
+          <h3 class="font-bold text-base text-slate-900">فنادق قريبة وموثوقة</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">فنادق مختارة بعناية تتراوح بين 150 إلى 450 متر عن الحرم المكي والمسجد النبوي لضمان راحة كبار السن والعائلات.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-800 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-handshake-angle"></i>
+          </div>
+          <h3 class="font-bold text-base text-slate-900">مرونة في الأداء (عربون 30%)</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">يمكنك تثبيت مقعدك الآن بدفع 30% فقط، مع إمكانية التحويل البنكي أو الدفع بمقر الوكالة بالدار البيضاء.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HOTELS SHOWCASE ================= -->
+  <section id="hotels" class="py-20 max-w-7xl mx-auto px-4 sm:px-8 space-y-10">
+    <div class="text-center space-y-2">
+      <span class="text-xs font-bold text-gold-700 bg-gold-100 px-3 py-1 rounded-full">إقامة فندقية فاخرة</span>
+      <h2 class="text-2xl sm:text-3xl font-black text-primary-950 font-cairo">فنادقنا المعتمدة في مكة والمدينة وإسطنبول</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=800&q=80" alt="فندق مكة" class="h-44 w-full object-cover">
+        <div class="p-5 space-y-2">
+          <span class="text-xs font-bold text-emerald-800">مكة المكرمة ★★★★</span>
+          <h4 class="font-bold text-slate-900">فندق تاج بارك / فندق أسكن</h4>
+          <p class="text-xs text-slate-500">يبعد 450 متر عن ساحات الحرم، غرف مكيفة وإفطار بوفيه مفتوح وسهولة وصول لساحات الطواف.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80" alt="فندق المدينة" class="h-44 w-full object-cover">
+        <div class="p-5 space-y-2">
+          <span class="text-xs font-bold text-emerald-800">المدينة المنورة ★★★★</span>
+          <h4 class="font-bold text-slate-900">فندق الحياة الماسي / رويال المدينة</h4>
+          <p class="text-xs text-slate-500">يبعد 250 متر عن المسجد النبوي وباب السلام، إقامة هادئة في المنطقة المركزية الشمالية.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=800&q=80" alt="فندق إسطنبول" class="h-44 w-full object-cover">
+        <div class="p-5 space-y-2">
+          <span class="text-xs font-bold text-emerald-800">إسطنبول ★★★★</span>
+          <h4 class="font-bold text-slate-900">فندق رويال إسطنبول (Royal Istanbul)</h4>
+          <p class="text-xs text-slate-500">قلب المدينة التاريخية بالقرب من السلطان أحمد ومضيق البوسفور مع إفطار تركي شامل.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= REVIEWS ================= -->
+  <section id="reviews" class="py-16 bg-primary-950 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-8">
+      <div class="text-center space-y-2">
+        <span class="text-xs font-bold text-gold-400">شهادات نعتز بها</span>
+        <h2 class="text-2xl sm:text-3xl font-black font-cairo">آراء وتجارب معتمرينا</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-primary-900/60 p-6 rounded-2xl border border-emerald-800/80 space-y-3">
+          <div class="text-gold-400 text-sm">★★★★★</div>
+          <p class="text-xs text-slate-200 leading-relaxed">"ما شاء الله، رحلة في قمة التنظيم مع وكالة رفيق الخير. الفنادق كانت قريبة جداً والتأطير الديني كان في المستوى الرفيع، جزاكم الله خيراً."</p>
+          <div class="text-xs font-bold text-white pt-2 border-t border-emerald-800">الحاج عبد الرحيم بنجلون - فاس</div>
+        </div>
+
+        <div class="bg-primary-900/60 p-6 rounded-2xl border border-emerald-800/80 space-y-3">
+          <div class="text-gold-400 text-sm">★★★★★</div>
+          <p class="text-xs text-slate-200 leading-relaxed">"تجربة الجمع بين زيارة معالم إسطنبول والعمرة كانت استثنائية، طاقم الوكالة رافق والدتي المسنة باهتمام شديد طيلة السفر."</p>
+          <div class="text-xs font-bold text-white pt-2 border-t border-emerald-800">لالة فاطمة الزهراء العلمي - الدار البيضاء</div>
+        </div>
+
+        <div class="bg-primary-900/60 p-6 rounded-2xl border border-emerald-800/80 space-y-3">
+          <div class="text-gold-400 text-sm">★★★★★</div>
+          <p class="text-xs text-slate-200 leading-relaxed">"السعر كان ممتازاً مقارنة بالجودة، دقة في المواعيد، وحافلات النقل جديدة ومريحة. سأكرر السفر معهم بإذن الله."</p>
+          <div class="text-xs font-bold text-white pt-2 border-t border-emerald-800">محمد الصديقي - الرباط</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT & CONSULTATION ================= -->
+  <section id="contact" class="py-20 max-w-7xl mx-auto px-4 sm:px-8 space-y-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+      
+      <div class="lg:col-span-6 space-y-6">
+        <div>
+          <span class="text-xs font-bold text-gold-700 bg-gold-100 px-3 py-1 rounded-full">تواصل مباشر</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-primary-950 font-cairo mt-2">نحن في خدمتكم للإجابة على كل استفسار</h2>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1">تفضل بزيارة مقرنا بالدار البيضاء أو تواصل مع مستشارنا عبر الهاتف والواتساب.</p>
+        </div>
+
+        <div class="space-y-4 text-xs sm:text-sm">
+          <div class="flex items-center gap-3 p-4 bg-white rounded-2xl border border-slate-200">
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-800 flex items-center justify-center text-lg shrink-0">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div>
+              <div class="text-xs text-slate-400">الهاتف المباشر:</div>
+              <a href="tel:0662574740" class="font-bold text-slate-900 text-base" dir="ltr">0662 57 47 40</a>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 p-4 bg-white rounded-2xl border border-slate-200">
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-800 flex items-center justify-center text-lg shrink-0">
+              <i class="fa-brands fa-whatsapp text-emerald-600"></i>
+            </div>
+            <div>
+              <div class="text-xs text-slate-400">خدمة الواتساب:</div>
+              <a href="https://wa.me/212662574740" target="_blank" class="font-bold text-emerald-700 text-base" dir="ltr">+212 662 57 47 40</a>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 p-4 bg-white rounded-2xl border border-slate-200">
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-800 flex items-center justify-center text-lg shrink-0">
+              <i class="fa-solid fa-location-dot text-gold-600"></i>
+            </div>
+            <div>
+              <div class="text-xs text-slate-400">المقر الرئيسي:</div>
+              <div class="font-bold text-slate-900">شارع الحسن الثاني، الدار البيضاء، المملكة المغربية</div>
+            </div>
+          </div>
+
+          <div class="p-4 bg-primary-950 text-white rounded-2xl border border-emerald-900 text-xs space-y-1">
+            <span class="text-gold-400 font-bold block">الحساب البنكي الرسمي لتحويلات العمرة:</span>
+            <div class="font-mono text-sm tracking-wider font-bold text-white" dir="ltr">007 780 0001234567890123 45</div>
+            <div class="text-[11px] text-emerald-200">التجاري وفا بنك (Attijariwafa Bank) - وكالة رفيق الخير</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Consultation Form -->
+      <div class="lg:col-span-6 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+        <h3 class="font-black text-lg text-primary-950 font-cairo">طلب استشارة أو حجز مخصص</h3>
+        <p class="text-xs text-slate-500">اترك بياناتك وسيتصل بك أحد خبراء العمرة لدينا في أقرب وقت.</p>
+
+        <form onsubmit="handleInquirySubmit(event)" class="space-y-3">
+          <div>
+            <label class="text-xs font-bold text-slate-700 block mb-1">الاسم الكامل *</label>
+            <input type="text" id="inqName" required placeholder="مثال: محمد التازي" class="w-full text-xs p-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white">
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="text-xs font-bold text-slate-700 block mb-1">رقم الهاتف (واتساب) *</label>
+              <input type="tel" id="inqPhone" required placeholder="0661234567" dir="ltr" class="w-full text-xs p-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-right">
+            </div>
+            <div>
+              <label class="text-xs font-bold text-slate-700 block mb-1">المدينة بالمغرب</label>
+              <input type="text" id="inqCity" placeholder="الدار البيضاء" class="w-full text-xs p-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white">
+            </div>
+          </div>
+          <div>
+            <label class="text-xs font-bold text-slate-700 block mb-1">البرنامج المطلوب</label>
+            <select id="inqPackage" class="w-full text-xs p-3 rounded-xl border border-slate-200 bg-slate-50">
+              <option>عمرة شعبان ورمضان المباركة 1446</option>
+              <option>عمرة الخريف (البرنامج الاقتصادي والمتوسط)</option>
+              <option>عمرة عبر تركيا (إسطنبول والحرمين)</option>
+              <option>عمرة عائلية مخصصة</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-xs font-bold text-slate-700 block mb-1">رسالتك أو استفسارك</label>
+            <textarea id="inqMessage" rows="3" placeholder="اكتب استفسارك هنا..." class="w-full text-xs p-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white resize-none"></textarea>
+          </div>
+          <button type="submit" class="w-full py-3.5 rounded-2xl bg-gold-gradient text-slate-950 font-black text-xs shadow-gold hover:opacity-95">
+            إرسال طلب الاستشارة المجانية
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-primary-950 text-slate-300 pt-16 pb-8 border-t-4 border-gold-500 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-8">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-8 border-b border-emerald-900">
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-2xl font-black text-white font-cairo">وكالة رفيق الخير للسفر والسياحة</span>
+          </div>
+          <p class="text-xs text-emerald-200/80 max-w-md">وكالة أسفار مرخصة بالمغرب متخصصة في تنظيم وتسويق رحلات العمرة إلى مكة المكرمة والمدينة المنورة.</p>
+        </div>
+
+        <div class="flex items-center gap-4 text-xs font-bold">
+          <a href="#hero" class="hover:text-gold-300">الرئيسية</a>
+          <a href="#packages" class="hover:text-gold-300">عروض العمرة</a>
+          <button onclick="openTrackerModal()" class="hover:text-gold-300 text-gold-400">تتبع الحجز</button>
+          <a href="#contact" class="hover:text-gold-300">اتصل بنا</a>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400">
+        <p>© 2026 وكالة رفيق الخير للسفر والسياحة. جميع الحقوق محفوظة.</p>
+        <p class="text-gold-400 font-semibold">ترخيص سياحي رقم: LIC-MOR-2024-8841</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING WHATSAPP BUTTON ================= -->
+  <div class="fixed bottom-6 left-6 z-50">
+    <a href="https://wa.me/212662574740?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%B9%D8%B1%D9%88%D8%B6%20%D8%B1%D8%AD%D9%84%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B9%D9%85%D8%B1%D8%A9" target="_blank" class="flex items-center gap-2.5 px-4 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full shadow-2xl transition-all transform hover:scale-105 border-2 border-white">
+      <i class="fa-brands fa-whatsapp text-2xl"></i>
+      <div class="text-right hidden sm:block">
+        <div class="text-[10px] text-emerald-100 font-medium">مستشار العمرة</div>
+        <div class="text-xs font-bold">تواصل فوري عبر واتساب</div>
+      </div>
+    </a>
+  </div>
+
+  <!-- ================= MODAL: BOOKING WIZARD ================= -->
+  <div id="bookingModal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-xl w-full max-h-[90vh] overflow-y-auto space-y-5 animate-in zoom-in-95">
+      <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+        <div>
+          <span class="text-xs text-gold-700 font-bold block">طلب حجز إلكتروني رسمي</span>
+          <h3 id="modalPkgTitle" class="text-lg font-black text-primary-950 font-cairo">عنوان البرنامج</h3>
+        </div>
+        <button onclick="closeBookingModal()" class="text-slate-400 hover:text-slate-600 text-lg font-bold">✕</button>
+      </div>
+
+      <form onsubmit="handleBookingSubmit(event)" class="space-y-4">
+        <!-- Room and travelers -->
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="text-xs font-bold text-slate-700 block mb-1">نوع الغرفة</label>
+            <select id="modalRoomType" class="w-full text-xs p-2.5 rounded-xl border border-slate-200" onchange="calculateModalPrice()">
+              <option value="quad">غرفة رباعية</option>
+              <option value="triple">غرفة ثلاثية (+1,000 د.م)</option>
+              <option value="double">غرفة ثنائية (+2,000 د.م)</option>
+              <option value="quint">غرفة خماسية (-500 د.م)</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-xs font-bold text-slate-700 block mb-1">عدد المعتمرين</label>
+            <select id="modalTravelers" class="w-full text-xs p-2.5 rounded-xl border border-slate-200" onchange="calculateModalPrice()">
+              <option value="1">معتمر واحد</option>
+              <option value="2" selected>معتمران (2)</option>
+              <option value="3">3 معتمرين</option>
+              <option value="4">4 معتمرين</option>
+              <option value="5">5 معتمرين</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Primary contact -->
+        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+          <span class="text-xs font-bold text-emerald-800 block">بيانات المعتمر الرئيسي:</span>
+          <div>
+            <input type="text" id="modalFullName" required placeholder="الاسم الكامل (كما في جواز السفر)" class="w-full text-xs p-2.5 rounded-xl border border-slate-200 bg-white">
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <input type="tel" id="modalPhone" required placeholder="رقم الهاتف (واتساب)" dir="ltr" class="w-full text-xs p-2.5 rounded-xl border border-slate-200 bg-white text-right">
+            <input type="text" id="modalCity" required placeholder="المدينة بالمغرب" class="w-full text-xs p-2.5 rounded-xl border border-slate-200 bg-white">
+          </div>
+        </div>
+
+        <!-- Coupon code -->
+        <div class="flex gap-2">
+          <input type="text" id="modalCoupon" placeholder="كود الخصم (جرب: RAMADANMUBARAK)" class="w-full text-xs uppercase font-mono p-2.5 rounded-xl border border-slate-200">
+          <button type="button" onclick="applyCoupon()" class="px-4 py-2.5 rounded-xl bg-primary-900 text-gold-300 font-bold text-xs shrink-0">تطبيق</button>
+        </div>
+        <div id="couponNotice" class="text-xs font-bold hidden"></div>
+
+        <!-- Payment Plan -->
+        <div class="space-y-1">
+          <label class="text-xs font-bold text-slate-700 block">خطة وسداد الدفع:</label>
+          <div class="grid grid-cols-2 gap-2">
+            <label class="p-3 rounded-xl border border-emerald-600 bg-emerald-50 text-xs flex items-center gap-2 cursor-pointer">
+              <input type="radio" name="payPlan" value="deposit" checked onchange="calculateModalPrice()">
+              <div>
+                <span class="font-bold block">دفع عربون 30%</span>
+                <span class="text-[10px] text-slate-500">تثبيت المقعد الآن</span>
+              </div>
+            </label>
+            <label class="p-3 rounded-xl border border-slate-200 bg-white text-xs flex items-center gap-2 cursor-pointer">
+              <input type="radio" name="payPlan" value="full" onchange="calculateModalPrice()">
+              <div>
+                <span class="font-bold block">الأداء الكامل (100%)</span>
+                <span class="text-[10px] text-slate-500">سداد المبلغ كاملاً</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Payment Mode -->
+        <div class="space-y-1">
+          <label class="text-xs font-bold text-slate-700 block">طريقة الدفع:</label>
+          <select id="modalPayMethod" class="w-full text-xs p-2.5 rounded-xl border border-slate-200 bg-white">
+            <option value="bank">تحويل بنكي رسمي (التجاري وفا بنك)</option>
+            <option value="cash">الدفع في مقر الوكالة (الدار البيضاء)</option>
+            <option value="card">الدفع بالبطاقة البنكية CMI</option>
+          </select>
+        </div>
+
+        <!-- Financial Summary -->
+        <div class="p-4 bg-primary-950 text-white rounded-2xl space-y-1.5 text-xs">
+          <div class="flex justify-between">
+            <span class="text-emerald-200">المبلغ الإجمالي للرحلة:</span>
+            <span id="modalGrandTotal" class="font-black text-white font-cairo text-sm">37,000 د.م</span>
+          </div>
+          <div class="flex justify-between text-gold-400 font-bold border-t border-emerald-900 pt-1.5">
+            <span>المبلغ المطلوب تسديده الآن:</span>
+            <span id="modalPayableNow" class="text-base font-black font-cairo">11,100 د.م</span>
+          </div>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-2xl bg-gold-gradient text-slate-950 font-black text-sm shadow-gold">
+          تأكيد طلب الحجز واستلام الوصل
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: VOUCHER SUCCESS ================= -->
+  <div id="voucherModal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-lg w-full space-y-6 text-center animate-in zoom-in-95">
+      <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center mx-auto text-2xl">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      <div>
+        <span class="text-xs font-bold text-gold-700 bg-gold-100 px-3 py-1 rounded-full">تم تسجيل الحجز بنجاح ✓</span>
+        <h3 class="text-xl font-black text-primary-950 font-cairo mt-2">تقبّل الله منا ومنكم صالح الأعمال</h3>
+        <p class="text-xs text-slate-500 mt-1">رقم مرجع الحجز الخاص بك:</p>
+        <div id="voucherCode" class="text-2xl font-black font-mono text-primary-950 tracking-wider my-2" dir="ltr">RAK-2026-9041</div>
+      </div>
+
+      <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 text-xs text-right space-y-1">
+        <div class="flex justify-between"><span>المسافر الرئيسي:</span><span id="voucherName" class="font-bold"></span></div>
+        <div class="flex justify-between"><span>البرنامج:</span><span id="voucherPkg" class="font-bold"></span></div>
+        <div class="flex justify-between"><span>المبلغ الإجمالي:</span><span id="voucherTotal" class="font-bold"></span></div>
+        <div class="flex justify-between text-emerald-800"><span>المبلغ المطلوب تسديده:</span><span id="voucherPayable" class="font-bold"></span></div>
+      </div>
+
+      <div class="flex gap-2">
+        <button onclick="window.print()" class="flex-1 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs">
+          <i class="fa-solid fa-print ml-1"></i> طباعة الوصل
+        </button>
+        <button onclick="notifyWhatsAppVoucher()" class="flex-1 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs">
+          <i class="fa-brands fa-whatsapp ml-1"></i> إشعار الوكالة
+        </button>
+      </div>
+      <button onclick="document.getElementById('voucherModal').classList.add('hidden')" class="text-xs text-slate-400 hover:underline">إغلاق</button>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: TRACKER ================= -->
+  <div id="trackerModal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full space-y-4 animate-in zoom-in-95">
+      <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+        <h3 class="font-bold text-base text-slate-900">تتبع حالة حجز العمرة</h3>
+        <button onclick="document.getElementById('trackerModal').classList.add('hidden')" class="text-slate-400 font-bold">✕</button>
+      </div>
+      <div class="space-y-3">
+        <div>
+          <label class="text-xs font-bold text-slate-700 block mb-1">رقم الحجز (مثال: RAK-2026-9041)</label>
+          <input type="text" id="trackCodeInput" placeholder="RAK-2026-9041" dir="ltr" class="w-full text-xs font-mono font-bold p-3 rounded-xl border border-slate-200 text-right uppercase">
+        </div>
+        <button onclick="trackBooking()" class="w-full py-3 rounded-xl bg-gold-gradient text-slate-950 font-black text-xs shadow-gold">
+          بحث وتتبع الحجز
+        </button>
+      </div>
+      <div id="trackResult" class="p-4 bg-slate-50 rounded-2xl border border-slate-200 text-xs hidden space-y-1 text-right">
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: ADMIN PANEL ================= -->
+  <div id="adminModal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto space-y-5 animate-in zoom-in-95 text-right">
+      <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+        <div>
+          <span class="text-xs text-gold-700 font-bold">لوحة التحكم السريعة</span>
+          <h3 class="text-lg font-black text-primary-950 font-cairo">إدارة حجوزات وكالة رفيق الخير</h3>
+        </div>
+        <button onclick="document.getElementById('adminModal').classList.add('hidden')" class="text-slate-400 font-bold">✕</button>
+      </div>
+
+      <div class="grid grid-cols-3 gap-3 text-center text-xs">
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+          <div class="text-slate-400 text-[10px]">إجمالي الحجوزات</div>
+          <div id="adminTotalCount" class="text-xl font-black text-primary-950">14</div>
+        </div>
+        <div class="p-3 bg-emerald-50 rounded-xl border border-emerald-200">
+          <div class="text-emerald-800 text-[10px]">المداخيل المسددة</div>
+          <div class="text-lg font-black text-emerald-800">120,400 د.م</div>
+        </div>
+        <div class="p-3 bg-amber-50 rounded-xl border border-amber-200">
+          <div class="text-amber-800 text-[10px]">المتبقي في الذمة</div>
+          <div class="text-lg font-black text-amber-800">68,500 د.م</div>
+        </div>
+      </div>
+
+      <div class="space-y-2">
+        <h4 class="font-bold text-xs text-slate-800">قائمة آخر الحجوزات المسجلة:</h4>
+        <div class="overflow-x-auto border border-slate-200 rounded-xl">
+          <table class="w-full text-right text-[11px]">
+            <thead class="bg-slate-50 text-slate-500 border-b border-slate-200">
+              <tr>
+                <th class="p-2.5">رقم الحجز</th>
+                <th class="p-2.5">المعتمر</th>
+                <th class="p-2.5">البرنامج</th>
+                <th class="p-2.5">المبلغ</th>
+                <th class="p-2.5">الحالة</th>
+              </tr>
+            </thead>
+            <tbody id="adminBookingsTable" class="divide-y divide-slate-100">
+              <tr>
+                <td class="p-2.5 font-mono font-bold" dir="ltr">RAK-2026-9041</td>
+                <td class="p-2.5 font-bold">رشيد التازي (2)</td>
+                <td class="p-2.5">عمرة شعبان ورمضان</td>
+                <td class="p-2.5 font-bold text-emerald-800">41,000 د.م</td>
+                <td class="p-2.5"><span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800">مؤكد</span></td>
+              </tr>
+              <tr>
+                <td class="p-2.5 font-mono font-bold" dir="ltr">RAK-2026-8812</td>
+                <td class="p-2.5 font-bold">عمر العلمي (4)</td>
+                <td class="p-2.5">عمرة عبر تركيا</td>
+                <td class="p-2.5 font-bold text-emerald-800">67,000 د.م</td>
+                <td class="p-2.5"><span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800">مدفوع كاملاً</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="pt-3 border-t border-slate-100 flex justify-between items-center text-xs">
+        <span class="text-slate-400">للوحة التحكم الكاملة عبر Next.js: <a href="/admin" class="text-emerald-800 font-bold underline">/admin</a></span>
+        <button onclick="document.getElementById('adminModal').classList.add('hidden')" class="px-4 py-2 rounded-xl bg-slate-100 font-bold">إغلاق</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= JAVASCRIPT LOGIC ================= -->
+  <script>
+    let currentPkg = { id: 'pkg-shaban-ramadan', title: 'عمرة شعبان ورمضان المباركة 1446', basePrice: 18500 };
+    let discount = 0;
+    let lastBooking = null;
+
+    function openBookingModal(id, title, basePrice) {
+      currentPkg = { id, title, basePrice };
+      document.getElementById('modalPkgTitle').innerText = title;
+      discount = 0;
+      document.getElementById('modalCoupon').value = '';
+      document.getElementById('couponNotice').classList.add('hidden');
+      calculateModalPrice();
+      const modal = document.getElementById('bookingModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeBookingModal() {
+      const modal = document.getElementById('bookingModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function calculateModalPrice() {
+      const travelers = parseInt(document.getElementById('modalTravelers').value) || 2;
+      const roomType = document.getElementById('modalRoomType').value;
+      let roomAddon = 0;
+      if (roomType === 'triple') roomAddon = 1000;
+      if (roomType === 'double') roomAddon = 2000;
+      if (roomType === 'quint') roomAddon = -500;
+
+      const pricePerPerson = Math.max(10000, currentPkg.basePrice + roomAddon);
+      const subtotal = pricePerPerson * travelers;
+      const grandTotal = Math.max(0, subtotal - discount);
+
+      const payPlan = document.querySelector('input[name="payPlan"]:checked').value;
+      const payableNow = payPlan === 'deposit' ? Math.round(grandTotal * 0.3) : grandTotal;
+
+      document.getElementById('modalGrandTotal').innerText = grandTotal.toLocaleString('ar-MA') + ' د.م';
+      document.getElementById('modalPayableNow').innerText = payableNow.toLocaleString('ar-MA') + ' د.م';
+    }
+
+    function applyCoupon() {
+      const code = document.getElementById('modalCoupon').value.trim().toUpperCase();
+      const notice = document.getElementById('couponNotice');
+      if (code === 'RAMADANMUBARAK') {
+        discount = 1000;
+        notice.innerText = '✓ تم تطبيق خصم بقيمة 1,000 درهم على الإجمالي!';
+        notice.className = 'text-xs font-bold text-emerald-700 block';
+      } else {
+        discount = 0;
+        notice.innerText = 'كود الخصم غير صحيح أو منتهي الصلاحية';
+        notice.className = 'text-xs font-bold text-rose-600 block';
+      }
+      calculateModalPrice();
+    }
+
+    function handleBookingSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('modalFullName').value.trim();
+      const phone = document.getElementById('modalPhone').value.trim();
+      const travelers = document.getElementById('modalTravelers').value;
+      const grandTotal = document.getElementById('modalGrandTotal').innerText;
+      const payableNow = document.getElementById('modalPayableNow').innerText;
+
+      const randomSuffix = Math.floor(1000 + Math.random() * 9000);
+      const code = `RAK-2026-${randomSuffix}`;
+
+      lastBooking = {
+        code,
+        name,
+        phone,
+        pkg: currentPkg.title,
+        travelers,
+        grandTotal,
+        payableNow
+      };
+
+      // Add to admin list
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td class="p-2.5 font-mono font-bold" dir="ltr">${code}</td>
+        <td class="p-2.5 font-bold">${name} (${travelers})</td>
+        <td class="p-2.5">${currentPkg.title}</td>
+        <td class="p-2.5 font-bold text-emerald-800">${grandTotal}</td>
+        <td class="p-2.5"><span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800">طلب جديد</span></td>
+      `;
+      document.getElementById('adminBookingsTable').prepend(tr);
+
+      // Close booking modal and show voucher
+      closeBookingModal();
+      document.getElementById('voucherCode').innerText = code;
+      document.getElementById('voucherName').innerText = name;
+      document.getElementById('voucherPkg').innerText = currentPkg.title;
+      document.getElementById('voucherTotal').innerText = grandTotal;
+      document.getElementById('voucherPayable').innerText = payableNow;
+
+      const vModal = document.getElementById('voucherModal');
+      vModal.classList.remove('hidden');
+      vModal.classList.add('flex');
+    }
+
+    function notifyWhatsAppVoucher() {
+      if (!lastBooking) return;
+      const text = encodeURIComponent(`السلام عليكم، قمت بحجز رحلة عبر الموقع:\nرقم الحجز: ${lastBooking.code}\nالاسم: ${lastBooking.name}\nالبرنامج: ${lastBooking.pkg}\nالمبلغ: ${lastBooking.grandTotal}`);
+      window.open(`https://wa.me/212662574740?text=${text}`, '_blank');
+    }
+
+    function openTrackerModal() {
+      const modal = document.getElementById('trackerModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function trackBooking() {
+      const input = document.getElementById('trackCodeInput').value.trim().toUpperCase();
+      const result = document.getElementById('trackResult');
+      if (!input) return;
+
+      result.classList.remove('hidden');
+      if (input.includes('9041')) {
+        result.innerHTML = `
+          <div class="text-emerald-800 font-bold">✓ الحجز مؤكد: RAK-2026-9041</div>
+          <div>المسافر: الحاج رشيد التازي</div>
+          <div>البرنامج: عمرة شعبان ورمضان المباركة 1446</div>
+          <div>تاريخ السفر: 2026-02-18 (الدار البيضاء)</div>
+          <div>الدفعة المسددة: 12,300 د.م (عربون 30%)</div>
+          <div>المتبقي: 28,700 د.م</div>
+        `;
+      } else if (input.includes('8812')) {
+        result.innerHTML = `
+          <div class="text-emerald-800 font-bold">✓ الحجز مدفوع بالكامل: RAK-2026-8812</div>
+          <div>المسافر: عمر العلمي (4 مسافرين)</div>
+          <div>البرنامج: عمرة عبر تركيا - إسطنبول ومكة والمدينة</div>
+          <div>المسدد: 67,000 د.م (مدفوع بالكامل)</div>
+        `;
+      } else {
+        result.innerHTML = `
+          <div class="text-amber-800 font-bold">الحجز ${input} مسجل وقيد المراجعة</div>
+          <div>جاري مطابقة إيصال الدفع وتأكيد تصريح الروضة وتذاكر الطيران.</div>
+        `;
+      }
+    }
+
+    function openAdminModal() {
+      const modal = document.getElementById('adminModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function filterPackages() {
+      const cat = document.getElementById('searchCategory').value;
+      const cards = document.querySelectorAll('.pkg-card');
+      cards.forEach(card => {
+        if (cat === 'all' || card.dataset.category === cat) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    function handleInquirySubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('inqName').value.trim();
+      const phone = document.getElementById('inqPhone').value.trim();
+      const pkg = document.getElementById('inqPackage').value;
+      const text = encodeURIComponent(`السلام عليكم، أنا ${name} (الهاتف: ${phone})، أرغب في الاستفسار عن ${pkg}`);
+      window.open(`https://wa.me/212662574740?text=${text}`, '_blank');
+      alert('شكراً لك، تم توجيه طلبك مباشرة إلى واتساب الوكالة!');
+    }
+  </script>
+
+</body>
+</html>
