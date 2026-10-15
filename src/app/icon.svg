@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient: Deep Islamic Emerald Green -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b" />
+      <stop offset="50%" stop-color="#043d2e" />
+      <stop offset="100%" stop-color="#02241b" />
+    </linearGradient>
+
+    <!-- Gold Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fce289" />
+      <stop offset="35%" stop-color="#d4af37" />
+      <stop offset="70%" stop-color="#aa821d" />
+      <stop offset="100%" stop-color="#fce289" />
+    </linearGradient>
+
+    <!-- Inner Glow -->
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#d4af37" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Rounded Squircle Base -->
+  <rect x="16" y="16" width="480" height="480" rx="120" ry="120" fill="url(#bgGrad)" stroke="url(#goldGrad)" stroke-width="14" />
+
+  <!-- Inner Ornamental Gold Border -->
+  <rect x="36" y="36" width="440" height="440" rx="104" ry="104" fill="none" stroke="url(#goldGrad)" stroke-width="3" stroke-dasharray="12 6" opacity="0.6" />
+
+  <!-- Stylized "RA" Monogram (Rafiq Al Khair) -->
+  <g filter="url(#goldGlow)">
+    <!-- Letter R -->
+    <path d="M 110 370 L 110 145 L 210 145 C 265 145 295 175 295 220 C 295 255 272 282 238 290 L 298 370 L 235 370 L 180 295 L 165 295 L 165 370 Z M 165 245 L 205 245 C 230 245 245 235 245 220 C 245 205 230 195 205 195 L 165 195 Z" fill="url(#goldGrad)" />
+    
+    <!-- Letter A -->
+    <path d="M 335 145 L 395 370 L 340 370 L 322 295 L 278 295 L 260 370 L 210 370 L 270 145 Z M 298 195 L 285 250 L 315 250 Z" fill="url(#goldGrad)" />
+  </g>
+
+  <!-- Ascending Airplane Swoosh -->
+  <path d="M 100 410 C 220 380 340 270 420 120" fill="none" stroke="url(#goldGrad)" stroke-width="10" stroke-linecap="round" />
+  
+  <!-- Airplane Silhouette at the peak -->
+  <g transform="translate(420, 120) rotate(-42) scale(1.1)" filter="url(#goldGlow)">
+    <path d="M 0 -22 L 7 -7 L 26 2 L 7 6 L 5 20 L 0 16 L -5 20 L -7 6 L -26 2 L -7 -7 Z" fill="url(#goldGrad)" />
+  </g>
+
+  <!-- Spiritual Star / Crescent Accent -->
+  <circle cx="395" cy="195" r="7" fill="url(#goldGrad)" />
+  <circle cx="380" cy="225" r="4" fill="url(#goldGrad)" opacity="0.8" />
+</svg>

@@ -37,7 +37,8 @@ export default function RootLayout({
     <html lang="ar" dir="rtl">
       <head>
         <meta name="theme-color" content="#064e3b" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="apple-touch-icon" href="/favicon.svg" />
       </head>
       <body className="min-h-screen flex flex-col font-cairo bg-[#fcfbf7] text-slate-900 antialiased selection:bg-gold-500 selection:text-white">
         <Navbar />
