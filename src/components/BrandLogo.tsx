@@ -30,12 +30,12 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   return (
     <Link href="/" className="inline-flex items-center gap-3 group select-none">
       {/* Logo Image */}
-      <div className={`relative transition-transform duration-300 group-hover:scale-105 ${iconSizes[size]}`}>
+      <div className={`relative transition-transform duration-300 group-hover:scale-105 rounded-xl bg-white shadow-md p-1 ${iconSizes[size]}`}>
         <Image
           src="/images/brand/Logo Rafiq Al Khair.png"
           alt="رفيق الخير"
           fill
-          className="object-contain"
+          className="object-contain p-0.5"
           priority
         />
       </div>
