@@ -47,19 +47,18 @@ export default async function HomePage() {
             src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=2000&q=85"
             alt="الكعبة المشرفة - بيت الله الحرام"
             fill
-            className="object-cover object-center opacity-40 scale-105 animate-pulse duration-[10000ms]"
+            className="object-cover object-center opacity-55 scale-105 animate-pulse duration-[10000ms]"
             priority
           />
-          {/* Gradient Vignette Overlays for Maximum Luxury Contrast */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#064e3b] via-black/70 to-black/85" />
-          <div className="absolute inset-0 bg-islamic-pattern opacity-30 mix-blend-overlay" />
+          {/* Clean Neutral Dark Vignette Overlay without green tint */}
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/65 to-slate-950/80" />
         </div>
 
         {/* Hero Content Container */}
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-8 py-20 text-center space-y-8">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-8 pt-36 pb-20 sm:pt-44 sm:pb-24 text-center space-y-8">
           
           {/* Trust Badge */}
-          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-emerald-950/80 border border-gold-400/40 backdrop-blur-md shadow-lg animate-in fade-in duration-500">
+          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 border border-gold-400/40 backdrop-blur-md shadow-lg animate-in fade-in duration-500">
             <span className="w-2 h-2 rounded-full bg-gold-400 animate-ping"></span>
             <span className="text-gold-300 text-xs sm:text-sm font-bold">
               وكالة رفيق الخير للسفر والسياحة - ترخيص معتمد بالمغرب
@@ -72,7 +71,7 @@ export default async function HomePage() {
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight font-cairo leading-tight sm:leading-tight">
               {settings.heroTitle}
             </h1>
-            <p className="text-base sm:text-xl text-emerald-100/90 max-w-3xl mx-auto font-light leading-relaxed">
+            <p className="text-base sm:text-xl text-slate-200 max-w-3xl mx-auto font-light leading-relaxed">
               {settings.heroSubtitle}
             </p>
           </div>
@@ -89,7 +88,7 @@ export default async function HomePage() {
 
             <Link
               href="/packages/omra-chaban-ramadan"
-              className="px-7 py-4 rounded-2xl bg-primary-900/90 hover:bg-primary-800 text-white border border-gold-400/40 font-bold text-sm sm:text-base backdrop-blur-md transition-all flex items-center gap-2"
+              className="px-7 py-4 rounded-2xl bg-white/10 hover:bg-white/20 text-white border border-gold-400/50 font-bold text-sm sm:text-base backdrop-blur-md transition-all flex items-center gap-2"
             >
               <Sparkles className="w-4 h-4 text-gold-400" />
               <span>عمرة شعبان ورمضان</span>
@@ -107,22 +106,22 @@ export default async function HomePage() {
           </div>
 
           {/* Quick Metrics Bar */}
-          <div className="pt-8 border-t border-emerald-900/40 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          <div className="pt-8 border-t border-white/15 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             <div>
               <div className="text-2xl sm:text-3xl font-extrabold text-gold-400 font-cairo">100%</div>
-              <div className="text-xs text-emerald-200/80">تأطير ديني وإداري معتمد</div>
+              <div className="text-xs text-slate-300">تأطير ديني وإداري معتمد</div>
             </div>
             <div>
               <div className="text-2xl sm:text-3xl font-extrabold text-gold-400 font-cairo">150 - 450 م</div>
-              <div className="text-xs text-emerald-200/80">مسافة الفنادق عن الحرمين</div>
+              <div className="text-xs text-slate-300">مسافة الفنادق عن الحرمين</div>
             </div>
             <div>
               <div className="text-2xl sm:text-3xl font-extrabold text-gold-400 font-cairo">مباشر</div>
-              <div className="text-xs text-emerald-200/80">طيران منتظم من الدار البيضاء</div>
+              <div className="text-xs text-slate-300">طيران منتظم من الدار البيضاء</div>
             </div>
             <div>
               <div className="text-2xl sm:text-3xl font-extrabold text-gold-400 font-cairo">24 / 7</div>
-              <div className="text-xs text-emerald-200/80">متابعة ميدانية في مكة والمدينة</div>
+              <div className="text-xs text-slate-300">متابعة ميدانية في مكة والمدينة</div>
             </div>
           </div>
 
