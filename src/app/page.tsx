@@ -40,27 +40,27 @@ export default async function HomePage() {
     <div className="flex flex-col min-h-screen">
       
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-[640px] lg:min-h-[720px] flex items-center justify-center bg-slate-950 overflow-hidden text-white">
+      <section id="hero" className="relative min-h-[640px] lg:min-h-[720px] flex items-center justify-center overflow-hidden transition-colors duration-500">
         {/* Background Image of Holy Kaaba with Spiritual Lighting */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=2000&q=85"
+            src="/images/hero-bg.png"
             alt="الكعبة المشرفة - بيت الله الحرام"
             fill
-            className="object-cover object-center opacity-55 scale-105 animate-pulse duration-[10000ms]"
+            className="object-cover object-center scale-105 transition-all duration-700"
             priority
           />
-          {/* Clean Neutral Dark Vignette Overlay without green tint */}
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/65 to-slate-950/80" />
+          {/* Dynamic Theme Overlay (Daylight morning white in light mode, Sacred Navy in dark mode) */}
+          <div className="hero-overlay absolute inset-0 transition-all duration-500" />
         </div>
 
         {/* Hero Content Container */}
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-8 pt-36 pb-20 sm:pt-44 sm:pb-24 text-center space-y-8">
           
           {/* Trust Badge */}
-          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 border border-gold-400/40 backdrop-blur-md shadow-lg animate-in fade-in duration-500">
+          <div className="hero-badge inline-flex items-center gap-2.5 px-4 py-2 rounded-full border backdrop-blur-md shadow-lg transition-all duration-300">
             <span className="w-2 h-2 rounded-full bg-gold-400 animate-ping"></span>
-            <span className="text-gold-300 text-xs sm:text-sm font-bold">
+            <span className="text-xs sm:text-sm font-bold">
               وكالة رفيق الخير للسفر والسياحة - ترخيص معتمد بالمغرب
             </span>
             <ShieldCheck className="w-4 h-4 text-gold-400" />
@@ -68,10 +68,10 @@ export default async function HomePage() {
 
           {/* Master Slogan & Headline */}
           <div className="space-y-4 max-w-4xl mx-auto">
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight font-cairo leading-tight sm:leading-tight">
+            <h1 className="hero-title text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight font-cairo leading-tight sm:leading-tight transition-colors duration-300">
               {settings.heroTitle}
             </h1>
-            <p className="text-base sm:text-xl text-slate-200 max-w-3xl mx-auto font-light leading-relaxed">
+            <p className="hero-subtitle text-base sm:text-xl max-w-3xl mx-auto font-light leading-relaxed transition-colors duration-300">
               {settings.heroSubtitle}
             </p>
           </div>
@@ -98,15 +98,15 @@ export default async function HomePage() {
               href="https://wa.me/212662574740?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%B9%D8%B1%D9%88%D8%B6%20%D8%B1%D8%AD%D9%84%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B9%D9%85%D8%B1%D8%A9"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-4 rounded-2xl bg-emerald-600/80 hover:bg-emerald-600 text-white font-bold text-sm sm:text-base border border-emerald-400/40 backdrop-blur-md transition-all flex items-center gap-2"
+              className="px-6 py-4 rounded-2xl bg-slate-900/90 hover:bg-slate-800 text-gold-300 font-bold text-sm sm:text-base border border-gold-500/40 backdrop-blur-md transition-all flex items-center gap-2"
             >
-              <MessageCircle className="w-5 h-5" />
+              <MessageCircle className="w-5 h-5 text-gold-400" />
               <span>تواصل عبر واتساب</span>
             </a>
           </div>
 
           {/* Quick Metrics Bar */}
-          <div className="pt-8 border-t border-white/15 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          <div className="hero-metrics pt-8 border-t border-white/15 grid grid-cols-2 md:grid-cols-4 gap-4 text-center transition-colors duration-300">
             <div>
               <div className="text-2xl sm:text-3xl font-extrabold text-gold-400 font-cairo">100%</div>
               <div className="text-xs text-slate-300">تأطير ديني وإداري معتمد</div>
@@ -139,7 +139,7 @@ export default async function HomePage() {
               <span className="p-2 rounded-xl bg-gold-500 text-slate-950 font-bold text-xs shrink-0">
                 إعلان هام
               </span>
-              <p className="text-xs sm:text-sm font-semibold text-emerald-100">
+              <p className="text-xs sm:text-sm font-semibold text-slate-200">
                 {settings.announcementText}
               </p>
             </div>
@@ -188,7 +188,7 @@ export default async function HomePage() {
       </section>
 
       {/* 5. UPCOMING TRIPS SCHEDULE (الرحلات القادمة) */}
-      <section className="py-16 bg-primary-950 text-white relative overflow-hidden">
+      <section className="py-16 bg-primary-950 text-white relative overflow-hidden theme-adaptive-section transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10 space-y-8">
           <div className="text-center space-y-2">
             <span className="text-xs font-bold text-gold-400 uppercase tracking-widest">
@@ -197,7 +197,7 @@ export default async function HomePage() {
             <h2 className="text-2xl sm:text-3xl font-black font-cairo">
               جدول الرحلات القادمة من مطار محمد الخامس
             </h2>
-            <p className="text-emerald-200/80 text-xs sm:text-sm max-w-xl mx-auto">
+            <p className="text-slate-300 text-xs sm:text-sm max-w-xl mx-auto">
               إمكانية تأكيد الحجز فورياً مع إمكانية دفع عربون 30% فقط وتثبيت سعر الصرف بالدرهم المغربي
             </p>
           </div>
@@ -206,7 +206,7 @@ export default async function HomePage() {
             {packages.map((pkg) => (
               <div 
                 key={pkg.id}
-                className="p-5 rounded-2xl bg-primary-900/60 border border-emerald-800/80 flex flex-col justify-between space-y-4 hover:border-gold-400/50 transition-all"
+                className="p-5 rounded-2xl bg-primary-900/60 border border-slate-800 flex flex-col justify-between space-y-4 hover:border-gold-400/50 transition-all"
               >
                 <div>
                   <div className="flex items-center justify-between text-xs text-gold-400 mb-2">
@@ -221,7 +221,7 @@ export default async function HomePage() {
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-emerald-800/80 flex items-center justify-between">
+                <div className="pt-4 border-t border-slate-800 flex items-center justify-between">
                   <div>
                     <span className="text-[10px] text-slate-400 block">ابتداءً من</span>
                     <span className="text-lg font-black text-gold-400 font-cairo">
@@ -244,7 +244,7 @@ export default async function HomePage() {
       {/* 6. WHY CHOOSE RAFIQ AL KHAIR (لماذا تختار وكالتنا؟) */}
       <section className="py-20 max-w-7xl mx-auto px-4 sm:px-8 space-y-12">
         <div className="text-center space-y-3 max-w-2xl mx-auto">
-          <span className="text-xs font-bold text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+          <span className="text-xs font-bold text-gold-500 bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/30">
             فخامة، أمانة، وروحانية
           </span>
           <h2 className="text-2xl sm:text-4xl font-black text-primary-950 font-cairo">
@@ -258,7 +258,7 @@ export default async function HomePage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           
           <div className="p-8 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-gold-300 transition-all space-y-4 group">
-            <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-800 flex items-center justify-center group-hover:bg-primary-900 group-hover:text-gold-400 transition-colors">
+            <div className="w-12 h-12 rounded-2xl bg-slate-100 text-slate-800 flex items-center justify-center group-hover:bg-primary-900 group-hover:text-gold-400 transition-colors">
               <Award className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-slate-900">تأطير ديني متواصل ومرشدين خبراء</h3>
@@ -268,7 +268,7 @@ export default async function HomePage() {
           </div>
 
           <div className="p-8 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-gold-300 transition-all space-y-4 group">
-            <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-800 flex items-center justify-center group-hover:bg-primary-900 group-hover:text-gold-400 transition-colors">
+            <div className="w-12 h-12 rounded-2xl bg-slate-100 text-slate-800 flex items-center justify-center group-hover:bg-primary-900 group-hover:text-gold-400 transition-colors">
               <Hotel className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-slate-900">فنادق مختارة بعناية قريبة من الحرم</h3>
@@ -278,7 +278,7 @@ export default async function HomePage() {
           </div>
 
           <div className="p-8 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-gold-300 transition-all space-y-4 group">
-            <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-800 flex items-center justify-center group-hover:bg-primary-900 group-hover:text-gold-400 transition-colors">
+            <div className="w-12 h-12 rounded-2xl bg-slate-100 text-slate-800 flex items-center justify-center group-hover:bg-primary-900 group-hover:text-gold-400 transition-colors">
               <Plane className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-slate-900">طيران منتظم وأوزان أمتعة مريحة</h3>
@@ -288,7 +288,7 @@ export default async function HomePage() {
           </div>
 
           <div className="p-8 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-gold-300 transition-all space-y-4 group">
-            <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-800 flex items-center justify-center group-hover:bg-primary-900 group-hover:text-gold-400 transition-colors">
+            <div className="w-12 h-12 rounded-2xl bg-slate-100 text-slate-800 flex items-center justify-center group-hover:bg-primary-900 group-hover:text-gold-400 transition-colors">
               <ShieldCheck className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-slate-900">حجز إلكتروني رسمي وشفافية مطلقة</h3>
@@ -298,7 +298,7 @@ export default async function HomePage() {
           </div>
 
           <div className="p-8 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-gold-300 transition-all space-y-4 group">
-            <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-800 flex items-center justify-center group-hover:bg-primary-900 group-hover:text-gold-400 transition-colors">
+            <div className="w-12 h-12 rounded-2xl bg-slate-100 text-slate-800 flex items-center justify-center group-hover:bg-primary-900 group-hover:text-gold-400 transition-colors">
               <HeartHandshake className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-slate-900">مرونة في الدفع ونظام العربون (30%)</h3>
@@ -308,7 +308,7 @@ export default async function HomePage() {
           </div>
 
           <div className="p-8 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-gold-300 transition-all space-y-4 group">
-            <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-800 flex items-center justify-center group-hover:bg-primary-900 group-hover:text-gold-400 transition-colors">
+            <div className="w-12 h-12 rounded-2xl bg-slate-100 text-slate-800 flex items-center justify-center group-hover:bg-primary-900 group-hover:text-gold-400 transition-colors">
               <Clock className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-slate-900">فريق خدمة ودعم على مدار الساعة</h3>
@@ -365,7 +365,7 @@ export default async function HomePage() {
             </div>
 
             <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center space-y-3 relative">
-              <div className="w-10 h-10 rounded-full bg-emerald-600 text-white font-black text-base flex items-center justify-center mx-auto shadow-md">
+              <div className="w-10 h-10 rounded-full bg-gold-500 text-slate-950 font-black text-base flex items-center justify-center mx-auto shadow-md">
                 4
               </div>
               <h4 className="font-bold text-sm text-slate-900">استلم ملف وتأشيرة الرحلة</h4>
@@ -408,7 +408,7 @@ export default async function HomePage() {
             </div>
             <div className="p-6 space-y-2">
               <h3 className="font-bold text-base text-slate-900">فندق تاج بارك / فندق أسكن</h3>
-              <p className="text-xs text-emerald-800 font-semibold flex items-center gap-1">
+              <p className="text-xs text-gold-600 font-semibold flex items-center gap-1">
                 <MapPin className="w-3.5 h-3.5" />
                 <span>يبعد 450 متر عن الحرم المكي الشريف</span>
               </p>
@@ -432,7 +432,7 @@ export default async function HomePage() {
             </div>
             <div className="p-6 space-y-2">
               <h3 className="font-bold text-base text-slate-900">فندق الحياة الماسي</h3>
-              <p className="text-xs text-emerald-800 font-semibold flex items-center gap-1">
+              <p className="text-xs text-gold-600 font-semibold flex items-center gap-1">
                 <MapPin className="w-3.5 h-3.5" />
                 <span>يبعد 250 متر عن المسجد النبوي وباب السلام</span>
               </p>
@@ -456,7 +456,7 @@ export default async function HomePage() {
             </div>
             <div className="p-6 space-y-2">
               <h3 className="font-bold text-base text-slate-900">فندق رويال إسطنبول (Royal Istanbul)</h3>
-              <p className="text-xs text-emerald-800 font-semibold flex items-center gap-1">
+              <p className="text-xs text-gold-600 font-semibold flex items-center gap-1">
                 <MapPin className="w-3.5 h-3.5" />
                 <span>بالقرب من السلطان أحمد والبوسفور</span>
               </p>
@@ -470,14 +470,14 @@ export default async function HomePage() {
       </section>
 
       {/* 9. REVIEWS SECTION (آراء المعتمرين) */}
-      <section id="reviews" className="py-20 bg-primary-950 text-white relative">
+      <section id="reviews" className="py-20 bg-primary-950 text-white relative theme-adaptive-section transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-12">
           <div className="text-center space-y-2 max-w-xl mx-auto">
             <span className="text-xs font-bold text-gold-400">شهادات نعتز بها</span>
             <h2 className="text-2xl sm:text-3xl font-black font-cairo">
               ماذا يقول المعتمرون عن وكالة رفيق الخير؟
             </h2>
-            <p className="text-emerald-200/80 text-xs sm:text-sm">
+            <p className="text-slate-300 text-xs sm:text-sm">
               آراء حقيقية وموثقة من معتمرين شرفنا بخدمتهم في مواسم العمرة السابقة
             </p>
           </div>
@@ -486,7 +486,7 @@ export default async function HomePage() {
             {reviews.map((rev) => (
               <div
                 key={rev.id}
-                className="p-6 rounded-3xl bg-primary-900/60 border border-emerald-800/80 space-y-4 hover:border-gold-400/40 transition-colors"
+                className="p-6 rounded-3xl bg-primary-900/60 border border-slate-800 space-y-4 hover:border-gold-400/40 transition-colors"
               >
                 <div className="flex items-center justify-between">
                   <div className="flex text-gold-400">
@@ -494,20 +494,20 @@ export default async function HomePage() {
                       <Star key={i} className="w-4 h-4 fill-current" />
                     ))}
                   </div>
-                  <span className="text-[11px] text-emerald-300 font-medium">{rev.date}</span>
+                  <span className="text-[11px] text-gold-400 font-medium">{rev.date}</span>
                 </div>
 
                 <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
                   &ldquo;{rev.comment}&rdquo;
                 </p>
 
-                <div className="pt-3 border-t border-emerald-800/60 flex items-center justify-between">
+                <div className="pt-3 border-t border-slate-800 flex items-center justify-between">
                   <div>
                     <h4 className="font-bold text-sm text-white">{rev.name}</h4>
-                    <span className="text-[11px] text-emerald-300">{rev.city} - {rev.packageName}</span>
+                    <span className="text-[11px] text-slate-400">{rev.city} - {rev.packageName}</span>
                   </div>
                   {rev.verified && (
-                    <span className="text-[10px] bg-emerald-800/80 text-emerald-200 px-2.5 py-1 rounded-full font-bold">
+                    <span className="text-[10px] bg-gold-500/20 text-gold-300 border border-gold-500/30 px-2.5 py-1 rounded-full font-bold">
                       معتمر موثق ✓
                     </span>
                   )}
@@ -525,7 +525,7 @@ export default async function HomePage() {
           {/* FAQ Column */}
           <div className="lg:col-span-7 space-y-6">
             <div className="space-y-2">
-              <span className="text-xs font-bold text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+              <span className="text-xs font-bold text-gold-500 bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/30">
                 إجابات على تساؤلاتك
               </span>
               <h2 className="text-2xl sm:text-3xl font-black text-primary-950 font-cairo">
@@ -559,7 +559,7 @@ export default async function HomePage() {
             هل أنت مستعد لأداء مناسك العمرة في أجواء إيمانية راقية؟
           </h2>
 
-          <p className="text-xs sm:text-base text-emerald-100/90 max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="text-xs sm:text-base text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">
             المقاعد محدودة لبرامج شعبان ورمضان وعمرة تركيا المباركة. اتصل بنا الآن أو قم بالحجز مباشرة عبر الموقع الإلكتروني.
           </p>
 

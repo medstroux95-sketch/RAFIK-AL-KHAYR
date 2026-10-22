@@ -63,10 +63,10 @@ function PackagesDropdown({
         onClick={() => setOpen(!open)}
         className={`flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
           isActive
-            ? 'text-gold-400 bg-white/15 font-bold border-b-2 border-gold-400 shadow-sm'
+            ? 'text-gold-500 font-bold border-b-2 border-gold-400 bg-gold-500/10 shadow-sm'
             : isTransparent
-            ? 'text-white/90 hover:text-gold-400 hover:bg-white/10 drop-shadow-sm'
-            : 'text-slate-200 hover:text-gold-400 hover:bg-white/5'
+            ? 'text-white hover:text-gold-400 drop-shadow-sm'
+            : 'text-primary-950 dark:text-slate-200 hover:text-gold-600 dark:hover:text-gold-400 hover:bg-gold-500/10'
         }`}
       >
         عروض العمرة
@@ -107,6 +107,14 @@ export const Navbar: React.FC = () => {
   const pathname = usePathname();
 
   useEffect(() => {
+    // Ensure clean default light theme without dark mode
+    document.documentElement.classList.remove('dark');
+    try {
+      localStorage.removeItem('rak_theme');
+    } catch {}
+  }, []);
+
+  useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
     handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -128,20 +136,10 @@ export const Navbar: React.FC = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isTransparent
-            ? 'bg-transparent'
-            : 'bg-primary-950/97 backdrop-blur-md shadow-xl border-b border-gold-500/30'
-        }`}
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/98 backdrop-blur-md shadow-md border-b border-slate-200"
       >
         {/* ── Top Banner ── */}
-        <div
-          className={`text-white text-xs py-1.5 px-4 transition-all duration-300 ${
-            isTransparent
-              ? 'bg-primary-950/50 backdrop-blur-sm border-b border-white/10'
-              : 'bg-primary-950 border-b border-gold-500/20'
-          }`}
-        >
+        <div className="text-white text-xs py-1.5 px-4 transition-all duration-300 bg-primary-950 border-b border-gold-500/30">
           <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 flex-wrap">
             {/* Right — badge */}
             <span className="text-gold-400 font-semibold text-[11px] hidden sm:block">
@@ -166,7 +164,7 @@ export const Navbar: React.FC = () => {
                 href="https://wa.me/212662574740?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%2C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%B9%D8%B1%D9%88%D8%B6%20%D8%A7%D9%84%D8%B9%D9%85%D8%B1%D8%A9"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-emerald-300 hover:text-emerald-200 transition-colors"
+                className="flex items-center gap-1.5 text-gold-300 hover:text-gold-200 transition-colors"
               >
                 <MessageCircle className="w-3 h-3" />
                 <span className="hidden sm:inline">واتساب</span>
@@ -174,7 +172,7 @@ export const Navbar: React.FC = () => {
               <span className="text-white/20">|</span>
               <Link
                 href="/admin"
-                className="flex items-center gap-1 text-slate-400 hover:text-gold-300 transition-colors text-[10px]"
+                className="flex items-center gap-1 text-slate-300 hover:text-gold-300 transition-colors text-[10px]"
               >
                 <Lock className="w-3 h-3 text-gold-400/70" />
                 <span className="hidden sm:inline">الإدارة</span>
@@ -184,15 +182,11 @@ export const Navbar: React.FC = () => {
         </div>
 
         {/* ── Main Nav Bar ── */}
-        <div
-          className={`w-full transition-colors duration-300 ${
-            isTransparent ? 'bg-black/20 backdrop-blur-md' : 'bg-transparent'
-          }`}
-        >
+        <div className="w-full transition-colors duration-300">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-4">
             {/* Logo */}
             <Link href="/" className="inline-flex items-center gap-2.5 group shrink-0 select-none">
-              <div className="relative w-10 h-10 rounded-xl bg-white shadow-md p-0.5 transition-transform duration-300 group-hover:scale-105 shrink-0">
+              <div className="relative w-10 h-10 rounded-xl bg-white shadow-md p-0.5 transition-transform duration-300 group-hover:scale-105 shrink-0 border border-slate-200/50">
                 <Image
                   src="/images/brand/Logo Rafiq Al Khair.png"
                   alt="رفيق الخير"
@@ -202,18 +196,10 @@ export const Navbar: React.FC = () => {
                 />
               </div>
               <div className="flex flex-col text-right leading-tight">
-                <span
-                  className={`font-extrabold text-xl tracking-tight font-cairo ${
-                    isTransparent ? 'text-white' : 'text-white'
-                  }`}
-                >
+                <span className="font-extrabold text-xl tracking-tight font-cairo text-primary-950">
                   رفيق الخير
                 </span>
-                <span
-                  className={`text-[10px] font-medium tracking-widest ${
-                    isTransparent ? 'text-gold-300' : 'text-gold-400'
-                  }`}
-                >
+                <span className="text-[10px] font-medium tracking-widest text-gold-700">
                   للسفر والسياحة
                 </span>
               </div>
@@ -224,7 +210,7 @@ export const Navbar: React.FC = () => {
               {/* عروض العمرة dropdown */}
               <PackagesDropdown
                 isActive={isPackageActive}
-                isTransparent={isTransparent}
+                isTransparent={false}
               />
 
               {/* Other links */}
@@ -236,10 +222,8 @@ export const Navbar: React.FC = () => {
                     href={link.href}
                     className={`px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-200 whitespace-nowrap ${
                       active
-                        ? 'text-gold-400 bg-white/15 font-bold border-b-2 border-gold-400 shadow-sm'
-                        : isTransparent
-                        ? 'text-white/90 hover:text-gold-400 hover:bg-white/10 drop-shadow-sm'
-                        : 'text-slate-200 hover:text-gold-400 hover:bg-white/5'
+                        ? 'text-gold-700 bg-gold-500/10 font-bold border-b-2 border-gold-500 shadow-sm'
+                        : 'text-primary-950 hover:text-gold-600 hover:bg-gold-500/10'
                     }`}
                   >
                     {link.name}
@@ -249,14 +233,16 @@ export const Navbar: React.FC = () => {
             </nav>
 
             {/* CTA Button */}
-            <div className="hidden sm:flex items-center shrink-0">
-              <Link
-                href="/packages"
-                className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gold-gradient text-slate-950 font-extrabold text-sm shadow-gold hover:shadow-xl transition-all transform hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap"
-              >
-                <Compass className="w-4 h-4 shrink-0" />
-                <span>استكشف الرحلات</span>
-              </Link>
+            <div className="flex items-center gap-2 shrink-0">
+              <div className="hidden sm:flex items-center">
+                <Link
+                  href="/packages"
+                  className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gold-gradient text-slate-950 font-extrabold text-sm shadow-gold hover:shadow-xl transition-all transform hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap"
+                >
+                  <Compass className="w-4 h-4 shrink-0" />
+                  <span>استكشف الرحلات</span>
+                </Link>
+              </div>
             </div>
 
             {/* Mobile hamburger */}
@@ -343,6 +329,7 @@ export const Navbar: React.FC = () => {
                 >
                   استكشف كافة عروض العمرة
                 </Link>
+
                 <a
                   href="tel:0662574740"
                   className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm transition-colors"
@@ -354,7 +341,7 @@ export const Navbar: React.FC = () => {
                   href="https://wa.me/212662574740"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-emerald-800/40 hover:bg-emerald-700/40 text-emerald-300 font-semibold text-sm transition-colors"
+                  className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 text-gold-300 border border-gold-500/20 font-semibold text-sm transition-colors"
                 >
                   <MessageCircle className="w-4 h-4" />
                   تواصل عبر واتساب

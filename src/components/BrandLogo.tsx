@@ -56,7 +56,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
             <span className={isLight ? 'text-gold-300' : 'text-gold-700 font-semibold'}>
               RAFIQ AL KHAIR
             </span>
-            <span className={isLight ? 'text-emerald-200/80' : 'text-slate-500'}>
+            <span className={isLight ? 'text-slate-300' : 'text-slate-500'}>
               للسفر والسياحة
             </span>
           </div>

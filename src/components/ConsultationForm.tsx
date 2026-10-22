@@ -51,7 +51,7 @@ export const ConsultationForm: React.FC = () => {
     <div className="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-slate-100 ring-1 ring-gold-200/50">
       {success ? (
         <div className="text-center py-8 space-y-4">
-          <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center mx-auto shadow-inner">
+          <div className="w-16 h-16 rounded-full bg-gold-500/20 text-gold-500 flex items-center justify-center mx-auto shadow-inner">
             <CheckCircle2 className="w-10 h-10" />
           </div>
           <h3 className="text-2xl font-black text-primary-950 font-cairo">
@@ -87,7 +87,7 @@ export const ConsultationForm: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="space-y-1">
               <label className="text-xs font-bold text-slate-700 flex items-center gap-1.5">
-                <User className="w-3.5 h-3.5 text-emerald-700" />
+                <User className="w-3.5 h-3.5 text-gold-500" />
                 <span>الاسم الكامل *</span>
               </label>
               <input
@@ -96,13 +96,13 @@ export const ConsultationForm: React.FC = () => {
                 placeholder="مثال: محمد بنجلون"
                 value={formData.fullName}
                 onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                className="w-full text-xs p-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-600 bg-slate-50 focus:bg-white"
+                className="w-full text-xs p-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-gold-500 bg-slate-50 focus:bg-white"
               />
             </div>
 
             <div className="space-y-1">
               <label className="text-xs font-bold text-slate-700 flex items-center gap-1.5">
-                <Phone className="w-3.5 h-3.5 text-emerald-700" />
+                <Phone className="w-3.5 h-3.5 text-gold-500" />
                 <span>رقم الهاتف (واتساب) *</span>
               </label>
               <input
@@ -112,7 +112,7 @@ export const ConsultationForm: React.FC = () => {
                 dir="ltr"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="w-full text-xs p-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-600 bg-slate-50 focus:bg-white text-right"
+                className="w-full text-xs p-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-gold-500 bg-slate-50 focus:bg-white text-right"
               />
             </div>
           </div>
@@ -120,13 +120,13 @@ export const ConsultationForm: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="space-y-1">
               <label className="text-xs font-bold text-slate-700 flex items-center gap-1.5">
-                <MapPin className="w-3.5 h-3.5 text-emerald-700" />
+                <MapPin className="w-3.5 h-3.5 text-gold-500" />
                 <span>المدينة في المغرب</span>
               </label>
               <select
                 value={formData.city}
                 onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                className="w-full text-xs p-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-600 bg-slate-50 focus:bg-white"
+                className="w-full text-xs p-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-gold-500 bg-slate-50 focus:bg-white"
               >
                 <option value="الدار البيضاء">الدار البيضاء</option>
                 <option value="الرباط">الرباط</option>
@@ -142,13 +142,13 @@ export const ConsultationForm: React.FC = () => {
 
             <div className="space-y-1">
               <label className="text-xs font-bold text-slate-700 flex items-center gap-1.5">
-                <HelpCircle className="w-3.5 h-3.5 text-emerald-700" />
+                <HelpCircle className="w-3.5 h-3.5 text-gold-500" />
                 <span>البرنامج المطلوب</span>
               </label>
               <select
                 value={formData.packageInterest}
                 onChange={(e) => setFormData({ ...formData, packageInterest: e.target.value })}
-                className="w-full text-xs p-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-600 bg-slate-50 focus:bg-white"
+                className="w-full text-xs p-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-gold-500 bg-slate-50 focus:bg-white"
               >
                 <option value="عمرة شعبان ورمضان المباركة 1446">عمرة شعبان ورمضان المباركة 1446</option>
                 <option value="عمرة عبر تركيا - إسطنبول والحرمين">عمرة عبر تركيا - إسطنبول والحرمين</option>
@@ -160,7 +160,7 @@ export const ConsultationForm: React.FC = () => {
 
           <div className="space-y-1">
             <label className="text-xs font-bold text-slate-700 flex items-center gap-1.5">
-              <MessageSquare className="w-3.5 h-3.5 text-emerald-700" />
+              <MessageSquare className="w-3.5 h-3.5 text-gold-500" />
               <span>استفساراتك أو طلباتك الخاصة</span>
             </label>
             <textarea
@@ -168,7 +168,7 @@ export const ConsultationForm: React.FC = () => {
               placeholder="اكتب هنا أي تفاصيل تود السؤال عنها (عدد أفراد العائلة، احتياج كراسي متحركة، تفضيلات الغرف...)"
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className="w-full text-xs p-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-600 bg-slate-50 focus:bg-white resize-none"
+              className="w-full text-xs p-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-gold-500 bg-slate-50 focus:bg-white resize-none"
             />
           </div>
 

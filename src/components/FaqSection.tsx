@@ -44,7 +44,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ faqs }) => {
               </div>
               <ChevronDown
                 className={`w-5 h-5 text-slate-400 transition-transform duration-200 shrink-0 ${
-                  isOpen ? 'transform rotate-180 text-emerald-800' : ''
+                  isOpen ? 'transform rotate-180 text-gold-500' : ''
                 }`}
               />
             </button>
@@ -52,7 +52,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ faqs }) => {
             {isOpen && (
               <div className="px-5 pb-5 pt-1 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 bg-slate-50/50">
                 <div className="flex items-start gap-2 pt-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-gold-500 shrink-0 mt-0.5" />
                   <span>{faq.answer}</span>
                 </div>
               </div>

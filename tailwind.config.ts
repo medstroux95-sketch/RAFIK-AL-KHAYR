@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,17 +11,17 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          50: "#f0fdf4",
-          100: "#dcfce7",
-          200: "#bbf7d0",
-          300: "#86efac",
-          400: "#4ade80",
-          500: "#22c55e",
-          600: "#16a34a",
-          700: "#15803d",
-          800: "#065f46",
-          900: "#064e3b",
-          950: "#022c22",
+          50: "#f0f5fa",
+          100: "#e1ecf6",
+          200: "#c7dcf0",
+          300: "#9ec4e5",
+          400: "#6fa6d6",
+          500: "#4988c5",
+          600: "#366eab",
+          700: "#2d578b",
+          800: "#284a74",
+          900: "#163355",
+          950: "#0b1a30",
         },
         gold: {
           50: "#fdfbf3",
@@ -52,7 +53,7 @@ const config: Config = {
         amiri: ["var(--font-amiri)", "serif"],
       },
       boxShadow: {
-        luxury: "0 10px 30px -10px rgba(6, 78, 59, 0.15), 0 4px 6px -4px rgba(212, 175, 55, 0.1)",
+        luxury: "0 10px 30px -10px rgba(15, 23, 42, 0.25), 0 4px 6px -4px rgba(212, 175, 55, 0.1)",
         gold: "0 4px 20px -2px rgba(212, 175, 55, 0.25)",
       },
     },

@@ -47,14 +47,14 @@ export const UmrahSearchBox: React.FC = () => {
             {/* Field 1: Departure City */}
             <div className="space-y-1.5">
               <label className="text-xs font-bold text-slate-700 flex items-center gap-1.5">
-                <MapPin className="w-3.5 h-3.5 text-emerald-700" />
+                <MapPin className="w-3.5 h-3.5 text-gold-500" />
                 <span>مدينة الانطلاق</span>
               </label>
               <div className="relative">
                 <select
                   value={city}
                   onChange={(e) => setCity(e.target.value)}
-                  className="w-full text-xs font-semibold p-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-600 appearance-none"
+                  className="w-full text-xs font-semibold p-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-gold-500 appearance-none"
                 >
                   <option value="">كافة المدن (الدار البيضاء أساسي)</option>
                   <option value="الدار البيضاء">الدار البيضاء (مطار محمد الخامس)</option>
@@ -71,14 +71,14 @@ export const UmrahSearchBox: React.FC = () => {
             {/* Field 2: Program Category / Season */}
             <div className="space-y-1.5">
               <label className="text-xs font-bold text-slate-700 flex items-center gap-1.5">
-                <Calendar className="w-3.5 h-3.5 text-emerald-700" />
+                <Calendar className="w-3.5 h-3.5 text-gold-500" />
                 <span>فئة وموسم الرحلة</span>
               </label>
               <div className="relative">
                 <select
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
-                  className="w-full text-xs font-semibold p-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-600 appearance-none"
+                  className="w-full text-xs font-semibold p-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-gold-500 appearance-none"
                 >
                   <option value="all">كافة البرامج والمواسم</option>
                   <option value="ramadan">عمرة شعبان ورمضان 1446</option>
@@ -93,14 +93,14 @@ export const UmrahSearchBox: React.FC = () => {
             {/* Field 3: Number of Travelers */}
             <div className="space-y-1.5">
               <label className="text-xs font-bold text-slate-700 flex items-center gap-1.5">
-                <Users className="w-3.5 h-3.5 text-emerald-700" />
+                <Users className="w-3.5 h-3.5 text-gold-500" />
                 <span>عدد المسافرين</span>
               </label>
               <div className="relative">
                 <select
                   value={travelers}
                   onChange={(e) => setTravelers(e.target.value)}
-                  className="w-full text-xs font-semibold p-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-600 appearance-none"
+                  className="w-full text-xs font-semibold p-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-gold-500 appearance-none"
                 >
                   <option value="1">معتمر واحد (فردي)</option>
                   <option value="2">معتمران (شخصين - ثنائي)</option>

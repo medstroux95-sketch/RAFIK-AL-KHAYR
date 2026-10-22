@@ -17,16 +17,16 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-primary-950 text-slate-300 pt-16 pb-12 border-t-4 border-gold-500 relative overflow-hidden">
       {/* Decorative background glow */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-emerald-800/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-slate-800/20 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-emerald-900/60">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
           
           {/* Column 1: Brand & Identity */}
           <div className="space-y-4">
             <BrandLogo variant="light" size="lg" />
-            <p className="text-sm text-emerald-100/80 leading-relaxed pt-2">
+            <p className="text-sm text-slate-300 leading-relaxed pt-2">
               وكالة أسفار مغربية معتمدة متخصصة في تنظيم وتسويق رحلات العمرة إلى مكة المكرمة والمدينة المنورة، وتقديم برامج استثنائية تضمن الراحة التامة والسكينة الإيمانية.
             </p>
             <div className="flex items-center gap-2 text-xs text-gold-400 font-semibold bg-primary-900/80 border border-gold-500/20 px-3 py-2 rounded-lg w-fit">
@@ -81,7 +81,7 @@ export const Footer: React.FC = () => {
               <span className="w-2 h-2 rounded-full bg-gold-400"></span>
               <span>طرق الدفع والحساب البنكي</span>
             </h4>
-            <div className="bg-primary-900/50 p-3.5 rounded-xl border border-emerald-800/60 text-xs space-y-2">
+            <div className="bg-primary-900/50 p-3.5 rounded-xl border border-slate-800 text-xs space-y-2">
               <div className="flex items-center gap-2 text-gold-300 font-bold">
                 <Building2 className="w-4 h-4 text-gold-400" />
                 <span>الحساب البنكي الرسمي (RIB):</span>
@@ -89,7 +89,7 @@ export const Footer: React.FC = () => {
               <p className="font-mono text-white text-xs bg-black/40 px-2.5 py-1.5 rounded text-center tracking-wider" dir="ltr">
                 007 780 0001234567890123 45
               </p>
-              <p className="text-[11px] text-emerald-200">
+              <p className="text-[11px] text-slate-400">
                 التجاري وفا بنك - Attijariwafa Bank (باسم: وكالة رفيق الخير)
               </p>
             </div>
@@ -121,11 +121,11 @@ export const Footer: React.FC = () => {
                 href="tel:0662574740" 
                 className="flex items-start gap-3 hover:text-white transition-colors group"
               >
-                <div className="p-2 rounded-lg bg-emerald-900 group-hover:bg-gold-500 group-hover:text-slate-950 transition-colors">
+                <div className="p-2 rounded-lg bg-slate-800 group-hover:bg-gold-500 group-hover:text-slate-950 transition-colors">
                   <Phone className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-xs text-emerald-300">الهاتف المباشر</div>
+                  <div className="text-xs text-gold-400">الهاتف المباشر</div>
                   <div className="font-bold text-white tracking-wide" dir="ltr">0662 57 47 40</div>
                 </div>
               </a>
@@ -136,21 +136,21 @@ export const Footer: React.FC = () => {
                 rel="noopener noreferrer"
                 className="flex items-start gap-3 hover:text-white transition-colors group"
               >
-                <div className="p-2 rounded-lg bg-emerald-900 group-hover:bg-emerald-600 transition-colors">
-                  <MessageCircle className="w-4 h-4 text-emerald-400 group-hover:text-white" />
+                <div className="p-2 rounded-lg bg-slate-800 group-hover:bg-gold-500 group-hover:text-slate-950 transition-colors">
+                  <MessageCircle className="w-4 h-4 text-gold-400 group-hover:text-slate-950" />
                 </div>
                 <div>
-                  <div className="text-xs text-emerald-300">خدمة الواتساب</div>
-                  <div className="font-bold text-emerald-400 tracking-wide" dir="ltr">+212 662 57 47 40</div>
+                  <div className="text-xs text-gold-400">خدمة الواتساب</div>
+                  <div className="font-bold text-gold-300 tracking-wide" dir="ltr">+212 662 57 47 40</div>
                 </div>
               </a>
 
               <div className="flex items-start gap-3">
-                <div className="p-2 rounded-lg bg-emerald-900">
+                <div className="p-2 rounded-lg bg-slate-800">
                   <MapPin className="w-4 h-4 text-gold-400" />
                 </div>
                 <div>
-                  <div className="text-xs text-emerald-300">المقر الرئيسي</div>
+                  <div className="text-xs text-gold-400">المقر الرئيسي</div>
                   <div className="text-xs text-slate-300">شارع الحسن الثاني، الدار البيضاء، المملكة المغربية</div>
                 </div>
               </div>

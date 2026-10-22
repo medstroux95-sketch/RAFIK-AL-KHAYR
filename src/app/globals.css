@@ -9,30 +9,309 @@
   --font-amiri: 'Amiri', serif;
 }
 
+/* ========================================================
+   HAJJ IDENTITY & THEME SWITCHING (MORNING ☀️ vs NIGHT 🌙)
+   الهوية الرسمية للحج (الأبيض الناصع + الكحلي الوقور + الذهب الملكي)
+   ======================================================== */
+
 body {
   font-family: var(--font-cairo);
-  background-color: #fdfcf9;
-  color: #1a202c;
+  background-color: #f8fafc;
+  color: #0b1a30;
   direction: rtl;
   text-align: right;
   overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 }
 
-/* Islamic Geometric Subtle Background Pattern */
+/* ────────────────────────────────────────────────────────
+   1. MORNING / DAYLIGHT MODE (الوضع الصباحي ☀️)
+   أبيض الإحرام الناصع + رمال منى وعرفات + الذهب الملكي
+   ──────────────────────────────────────────────────────── */
+html:not(.dark) body {
+  background-color: #f8fafc !important;
+  color: #0b1a30 !important;
+}
+
+/* Hero section: majestic Kaaba background with clear visibility and spiritual luxury */
+#hero {
+  position: relative;
+  background-color: #060e1b !important;
+  color: #ffffff !important;
+}
+
+#hero .hero-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(6, 14, 27, 0.60) 0%,
+    rgba(6, 14, 27, 0.30) 40%,
+    rgba(6, 14, 27, 0.65) 75%,
+    rgba(6, 14, 27, 0.92) 100%
+  ) !important;
+}
+
+#hero img {
+  opacity: 0.88 !important;
+  filter: contrast(1.08) brightness(1.02);
+}
+
+#hero .hero-title {
+  color: #ffffff !important;
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.8);
+}
+
+#hero .hero-subtitle {
+  color: #f1f5f9 !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);
+}
+
+#hero .hero-badge {
+  background-color: rgba(6, 14, 27, 0.8) !important;
+  border-color: rgba(212, 175, 55, 0.8) !important;
+  color: #ffffff !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4) !important;
+}
+
+#hero .hero-badge span {
+  color: #ffffff !important;
+}
+
+#hero .hero-metrics {
+  border-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+#hero .hero-metrics div > div:last-child {
+  color: #e2e8f0 !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Morning Navbar */
+html:not(.dark) header > div:last-child {
+  background-color: rgba(255, 255, 255, 0.96) !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 20px -2px rgba(11, 26, 48, 0.08) !important;
+}
+
+html:not(.dark) header nav a,
+html:not(.dark) header nav button {
+  color: #0b1a30 !important;
+}
+
+html:not(.dark) #top-bar,
+html:not(.dark) header > div:first-child {
+  background-color: #0b1a30 !important;
+  color: #ffffff !important;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3) !important;
+}
+
+/* Sections that adapt to morning daylight */
+html:not(.dark) .theme-adaptive-section {
+  background-color: #f4f8fc !important;
+  color: #0b1a30 !important;
+  border-color: #e2e8f0 !important;
+}
+
+html:not(.dark) .theme-adaptive-section h2,
+html:not(.dark) .theme-adaptive-section h4 {
+  color: #0b1a30 !important;
+}
+
+html:not(.dark) .theme-adaptive-section p {
+  color: #475569 !important;
+}
+
+html:not(.dark) .theme-adaptive-section .bg-primary-900\/60 {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 4px 15px -3px rgba(11, 26, 48, 0.06) !important;
+}
+
+html:not(.dark) .theme-adaptive-section .bg-primary-900\/60 h4,
+html:not(.dark) .theme-adaptive-section .bg-primary-900\/60 span,
+html:not(.dark) .theme-adaptive-section .bg-primary-900\/60 p {
+  color: #1e3a5f !important;
+}
+
+html:not(.dark) .theme-adaptive-section .border-slate-800 {
+  border-color: #e2e8f0 !important;
+}
+
+html:not(.dark) .theme-adaptive-section .text-slate-200 {
+  color: #334155 !important;
+}
+
+html:not(.dark) .theme-adaptive-section .text-slate-300 {
+  color: #475569 !important;
+}
+
+html:not(.dark) .theme-adaptive-section .text-white {
+  color: #0b1a30 !important;
+}
+
+/* ────────────────────────────────────────────────────────
+   2. NIGHT MODE (الوضع الليلي 🌙)
+   سماء مكة الكحلية العميقة والوقورة + الذهب الملكي
+   ──────────────────────────────────────────────────────── */
+html.dark body {
+  background-color: #060e1b !important;
+  color: #f8fafc !important;
+}
+
+/* Hero Section in Night Mode: majestic dark Mecca night */
+html.dark #hero {
+  background-color: #060e1b !important;
+  color: #ffffff !important;
+}
+
+html.dark #hero .hero-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(6, 14, 27, 0.60) 0%,
+    rgba(6, 14, 27, 0.30) 40%,
+    rgba(6, 14, 27, 0.65) 75%,
+    rgba(6, 14, 27, 0.92) 100%
+  ) !important;
+}
+
+html.dark #hero img {
+  opacity: 0.88 !important;
+  filter: contrast(1.08) brightness(1.02);
+}
+
+html.dark #hero .hero-title {
+  color: #ffffff !important;
+}
+
+html.dark #hero .hero-subtitle {
+  color: #cbd5e1 !important;
+}
+
+html.dark #hero .hero-badge {
+  background-color: rgba(11, 26, 48, 0.85) !important;
+  border-color: rgba(212, 175, 55, 0.5) !important;
+  color: #f2c755 !important;
+}
+
+html.dark #hero .hero-metrics {
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+html.dark header > div:last-child {
+  background-color: rgba(11, 26, 48, 0.96) !important;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3) !important;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5) !important;
+}
+
+html.dark #top-bar,
+html.dark header > div:first-child {
+  background-color: #040811 !important;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2) !important;
+}
+
+html.dark header nav a,
+html.dark header nav button {
+  color: #cbd5e1 !important;
+}
+
+/* Cards & containers in Dark Mode */
+html.dark .bg-white {
+  background-color: #0e2038 !important;
+  color: #f8fafc !important;
+  border-color: #1a365d !important;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5) !important;
+}
+
+html.dark .pkg-card {
+  background-color: #0e2038 !important;
+  border-color: #1a365d !important;
+  color: #f8fafc !important;
+}
+
+html.dark .bg-slate-50,
+html.dark .bg-slate-100,
+html.dark .bg-slate-100\/70 {
+  background-color: #0a1728 !important;
+  color: #cbd5e1 !important;
+  border-color: #1a365d !important;
+}
+
+html.dark .border-slate-100,
+html.dark .border-slate-200,
+html.dark .border-slate-200\/60,
+html.dark .border-slate-200\/90,
+html.dark .border-slate-300 {
+  border-color: #1a365d !important;
+}
+
+html.dark .text-slate-900,
+html.dark .text-primary-950 {
+  color: #ffffff !important;
+}
+
+html.dark .text-slate-800,
+html.dark .text-slate-700 {
+  color: #e2e8f0 !important;
+}
+
+html.dark .text-slate-600,
+html.dark .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+html.dark .text-slate-400 {
+  color: #64748b !important;
+}
+
+/* Dark Mode Form Inputs & Selects */
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background-color: #162c4b !important;
+  color: #ffffff !important;
+  border-color: #244774 !important;
+}
+
+html.dark select option {
+  background-color: #0e2038;
+  color: #ffffff;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #64748b !important;
+}
+
+/* Dark Mode Modal dialogs */
+html.dark #bookingModal > div,
+html.dark #trackerModal > div,
+html.dark #adminModal > div,
+html.dark #voucherModal > div {
+  background-color: #0e2038 !important;
+  border-color: #1a365d !important;
+  color: #f8fafc !important;
+}
+
+/* Islamic pattern background in Hajj Navy */
 .bg-islamic-pattern {
-  background-color: #064e3b;
-  background-image: radial-gradient(rgba(212, 175, 55, 0.12) 1px, transparent 1px), radial-gradient(rgba(212, 175, 55, 0.08) 1px, #064e3b 1px);
+  background-color: #0b1a30;
+  background-image: radial-gradient(rgba(212, 175, 55, 0.15) 1px, transparent 1px), radial-gradient(rgba(212, 175, 55, 0.08) 1px, #0b1a30 1px);
   background-size: 40px 40px;
   background-position: 0 0, 20px 20px;
 }
 
+html.dark .bg-islamic-pattern {
+  background-color: #060e1b;
+  background-image: radial-gradient(rgba(212, 175, 55, 0.15) 1px, transparent 1px), radial-gradient(rgba(212, 175, 55, 0.08) 1px, #060e1b 1px);
+}
+
 .bg-pattern-light {
-  background-color: #faf9f5;
-  background-image: radial-gradient(rgba(6, 78, 59, 0.04) 1px, transparent 1px);
+  background-color: #f4f8fc;
+  background-image: radial-gradient(rgba(11, 26, 48, 0.05) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
-/* Gold Gradient Effects */
+/* Gold Gradient Effects (Kiswah Royal Gold) */
 .text-gold-gradient {
   background: linear-gradient(135deg, #d4af37 0%, #f6e05e 50%, #c59b27 100%);
   -webkit-background-clip: text;
@@ -47,7 +326,7 @@ body {
   border-image: linear-gradient(135deg, #d4af37, #f6e05e, #c59b27) 1;
 }
 
-/* Smooth Scrolling & Custom Scrollbar */
+/* Smooth Scrolling & Custom Scrollbar in Hajj Colors */
 html {
   scroll-behavior: smooth;
 }
@@ -56,12 +335,12 @@ html {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #f1f5fa;
 }
 ::-webkit-scrollbar-thumb {
-  background: #064e3b;
+  background: #163355;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #043629;
+  background: #d4af37;
 }
