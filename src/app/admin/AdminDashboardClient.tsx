@@ -298,7 +298,12 @@ export default function AdminDashboardClient({
           </p>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-center gap-3">
+          <div className="flex items-center gap-2 bg-emerald-900/70 border border-gold-400/40 px-3.5 py-2 rounded-xl text-xs">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span className="text-slate-300">المشرف الحالي:</span>
+            <span className="text-gold-300 font-mono font-bold" dir="ltr">{settings.email}</span>
+          </div>
           <Link
             href="/"
             className="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs transition-colors flex items-center gap-1.5"

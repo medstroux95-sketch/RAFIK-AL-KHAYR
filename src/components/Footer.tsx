@@ -145,6 +145,19 @@ export const Footer: React.FC = () => {
                 </div>
               </a>
 
+              <a 
+                href="mailto:rafikelkhayer@gmail.com" 
+                className="flex items-start gap-3 hover:text-white transition-colors group"
+              >
+                <div className="p-2 rounded-lg bg-slate-800 group-hover:bg-gold-500 group-hover:text-slate-950 transition-colors">
+                  <Mail className="w-4 h-4 text-gold-400 group-hover:text-slate-950" />
+                </div>
+                <div>
+                  <div className="text-xs text-gold-400">البريد الإلكتروني</div>
+                  <div className="text-xs font-semibold text-white tracking-wide" dir="ltr">rafikelkhayer@gmail.com</div>
+                </div>
+              </a>
+
               <div className="flex items-start gap-3">
                 <div className="p-2 rounded-lg bg-slate-800">
                   <MapPin className="w-4 h-4 text-gold-400" />

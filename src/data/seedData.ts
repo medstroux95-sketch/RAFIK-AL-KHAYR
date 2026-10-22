@@ -6,7 +6,7 @@ export const initialSiteSettings: SiteSettings = {
   slogan: "نسعى لراحتكم لتكون رفيقكم في الخير",
   phone: "0662574740",
   whatsapp: "212662574740",
-  email: "contact@rafiqalkhair.ma",
+  email: "rafikelkhayer@gmail.com",
   address: "شارع الحسن الثاني، الدار البيضاء، المغرب",
   city: "الدار البيضاء",
   country: "المغرب",

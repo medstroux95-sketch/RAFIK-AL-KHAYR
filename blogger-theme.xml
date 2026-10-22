@@ -1182,6 +1182,7 @@
         <div>
           <span class="text-xs text-gold-700 font-bold">لوحة التحكم السريعة</span>
           <h3 class="text-lg font-black text-primary-950 font-cairo">إدارة حجوزات وكالة رفيق الخير</h3>
+          <div class="text-[11px] text-slate-500 mt-1">المشرف: <span class="font-mono font-bold text-gold-600" dir="ltr">rafikelkhayer@gmail.com</span></div>
         </div>
         <button onclick="document.getElementById('adminModal').classList.add('hidden')" class="text-slate-400 font-bold">✕</button>
       </div>

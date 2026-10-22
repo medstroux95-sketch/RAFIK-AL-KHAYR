@@ -34,7 +34,7 @@ export default async function ContactPage() {
         </div>
 
         {/* Contact Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           
           <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-3">
             <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-800 flex items-center justify-center">
@@ -65,6 +65,21 @@ export default async function ContactPage() {
               dir="ltr"
             >
               +{settings.whatsapp}
+            </a>
+          </div>
+
+          <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-3">
+            <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-800 flex items-center justify-center">
+              <Mail className="w-6 h-6 text-gold-600" />
+            </div>
+            <h3 className="font-bold text-base text-slate-900">البريد الإلكتروني للإدارة</h3>
+            <p className="text-xs text-slate-500">للمراسلات والاستفسارات الرسمية:</p>
+            <a 
+              href={`mailto:${settings.email}`} 
+              className="font-bold text-sm text-primary-950 block hover:text-gold-700 truncate"
+              dir="ltr"
+            >
+              {settings.email}
             </a>
           </div>
 
