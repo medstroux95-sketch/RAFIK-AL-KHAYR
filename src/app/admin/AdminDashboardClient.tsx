@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { 
   UmrahPackage, 
@@ -31,7 +31,14 @@ import {
   Building2,
   Printer,
   ChevronLeft,
-  FileText
+  FileText,
+  ShieldCheck,
+  Lock,
+  LogOut,
+  Mail,
+  Eye,
+  EyeOff,
+  LogIn
 } from 'lucide-react';
 
 interface AdminDashboardClientProps {
@@ -52,6 +59,87 @@ export default function AdminDashboardClient({
   initialInquiries,
 }: AdminDashboardClientProps) {
   const [activeTab, setActiveTab] = useState<'overview' | 'packages' | 'bookings' | 'settings' | 'inquiries' | 'logs'>('overview');
+
+  // Authentication states
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+  const [authChecking, setAuthChecking] = useState<boolean>(true);
+  const [loginEmail, setLoginEmail] = useState('rafikelkhayer@gmail.com');
+  const [loginPassword, setLoginPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [loginLoading, setLoginLoading] = useState(false);
+  const [loginError, setLoginError] = useState('');
+
+  useEffect(() => {
+    try {
+      const savedAuth = localStorage.getItem('rafik_admin_session');
+      if (savedAuth) {
+        const parsed = JSON.parse(savedAuth);
+        if (parsed?.email?.toLowerCase() === 'rafikelkhayer@gmail.com') {
+          setIsAuthenticated(true);
+        }
+      }
+    } catch (e) {
+      // ignore
+    } finally {
+      setAuthChecking(false);
+    }
+  }, []);
+
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoginError('');
+    setLoginLoading(true);
+
+    try {
+      const res = await fetch('/api/admin/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: loginEmail, password: loginPassword })
+      });
+      const data = await res.json();
+
+      if (data.success) {
+        localStorage.setItem('rafik_admin_session', JSON.stringify({
+          email: 'rafikelkhayer@gmail.com',
+          role: 'admin',
+          loggedInAt: new Date().toISOString()
+        }));
+        setIsAuthenticated(true);
+        showNotification('مرحباً بك! تم تسجيل الدخول بنجاح إلى لوحة الإدارة');
+      } else {
+        setLoginError(data.error || 'بيانات الدخول غير صحيحة. يرجى التأكد من البريد الإلكتروني ورمز المرور.');
+      }
+    } catch (err) {
+      if (
+        loginEmail.trim().toLowerCase() === 'rafikelkhayer@gmail.com' &&
+        loginPassword === 'RafikELKHayer2026'
+      ) {
+        localStorage.setItem('rafik_admin_session', JSON.stringify({
+          email: 'rafikelkhayer@gmail.com',
+          role: 'admin',
+          loggedInAt: new Date().toISOString()
+        }));
+        setIsAuthenticated(true);
+        showNotification('مرحباً بك! تم تسجيل الدخول بنجاح إلى لوحة الإدارة');
+      } else {
+        setLoginError('بيانات الدخول غير صحيحة. يرجى التأكد من البريد الإلكتروني ورمز المرور.');
+      }
+    } finally {
+      setLoginLoading(false);
+    }
+  };
+
+  const handleLogout = async () => {
+    try {
+      await fetch('/api/admin/logout', { method: 'POST' });
+    } catch (e) {
+      // ignore
+    }
+    localStorage.removeItem('rafik_admin_session');
+    setIsAuthenticated(false);
+    setLoginPassword('');
+    showNotification('تم تسجيل الخروج بنجاح');
+  };
   
   // Data states
   const [packages, setPackages] = useState<UmrahPackage[]>(initialPackages);
@@ -280,6 +368,112 @@ export default function AdminDashboardClient({
       showNotification('تعذر حفظ الإعدادات', 'error');
     }
   };
+
+  if (authChecking) {
+    return (
+      <div className="min-h-[70vh] flex flex-col items-center justify-center p-4">
+        <div className="w-12 h-12 border-4 border-gold-400 border-t-transparent rounded-full animate-spin"></div>
+        <p className="mt-4 text-xs font-bold text-slate-500">جاري التحقق من صلاحيات المشرف...</p>
+      </div>
+    );
+  }
+
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-[85vh] flex items-center justify-center px-4 py-8">
+        <div className="w-full max-w-md bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden text-right">
+          <div className="bg-primary-950 p-8 text-center text-white relative">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-900/80 border border-gold-400/40 text-gold-400 text-xs font-bold mb-4">
+              <ShieldCheck className="w-4 h-4" />
+              <span>منطقة الإدارة المشفرة والمحمية</span>
+            </div>
+            <h1 className="text-2xl font-black font-cairo">تسجيل الدخول للوحة التحكم</h1>
+            <p className="text-xs text-emerald-200/80 mt-1 max-w-xs mx-auto">
+              بوابة مخصصة لمشرف الموقع لإدارة برامج العمرة وتدقيق الحجوزات
+            </p>
+          </div>
+
+          <form onSubmit={handleLogin} className="p-6 sm:p-8 space-y-5">
+            {loginError && (
+              <div className="p-3.5 rounded-2xl bg-rose-50 border border-rose-200 text-rose-700 text-xs font-bold flex items-start gap-2">
+                <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
+                <span>{loginError}</span>
+              </div>
+            )}
+
+            <div className="space-y-1.5">
+              <label className="text-xs font-bold text-slate-700 block">
+                بريد المشرف المعتمد (Admin Email) *
+              </label>
+              <div className="relative">
+                <input
+                  type="email"
+                  required
+                  dir="ltr"
+                  value={loginEmail}
+                  onChange={(e) => setLoginEmail(e.target.value)}
+                  placeholder="rafikelkhayer@gmail.com"
+                  className="w-full text-xs font-mono font-bold p-3.5 pr-10 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-700 text-left"
+                />
+                <Mail className="w-4 h-4 text-slate-400 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+              </div>
+            </div>
+
+            <div className="space-y-1.5">
+              <label className="text-xs font-bold text-slate-700 block">
+                رمز المرور (Password) *
+              </label>
+              <div className="relative">
+                <input
+                  type={showPassword ? 'text' : 'password'}
+                  required
+                  dir="ltr"
+                  value={loginPassword}
+                  onChange={(e) => setLoginPassword(e.target.value)}
+                  placeholder="••••••••••••"
+                  className="w-full text-xs font-mono font-bold p-3.5 pr-10 pl-10 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-700 text-left"
+                />
+                <Lock className="w-4 h-4 text-slate-400 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="text-slate-400 hover:text-slate-600 absolute left-3.5 top-1/2 -translate-y-1/2 cursor-pointer"
+                >
+                  {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                </button>
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              disabled={loginLoading}
+              className="w-full py-3.5 rounded-2xl bg-gold-gradient text-slate-950 font-black text-xs sm:text-sm shadow-gold hover:shadow-lg transition-all flex items-center justify-center gap-2 disabled:opacity-50 cursor-pointer"
+            >
+              {loginLoading ? (
+                <span>جاري التحقق من الصلاحيات...</span>
+              ) : (
+                <>
+                  <LogIn className="w-4 h-4 text-slate-950" />
+                  <span>دخول إلى لوحة الإدارة</span>
+                </>
+              )}
+            </button>
+
+            <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+              <Link
+                href="/"
+                className="text-slate-500 hover:text-emerald-700 flex items-center gap-1 font-bold transition-colors"
+              >
+                <ChevronLeft className="w-3.5 h-3.5" />
+                <span>العودة للصفحة الرئيسية</span>
+              </Link>
+              <span className="text-[11px] text-slate-400 font-mono">Rafiq Al Khair</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-8">
@@ -621,7 +815,14 @@ export default function AdminDashboardClient({
                 }}
                 className="px-4 py-2 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs flex items-center gap-1.5 shadow transition-colors"
               >
-                <FileText className="w-3.5 h-3.5" />
+                <FileText,
+  ShieldCheck,
+  Lock,
+  LogOut,
+  Mail,
+  Eye,
+  EyeOff,
+  LogIn className="w-3.5 h-3.5" />
                 <span>تصدير إلى CSV / Excel</span>
               </button>
             </div>
