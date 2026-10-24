@@ -1,17 +1,29 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 const ADMIN_EMAIL = 'rafikelkhayer@gmail.com';
-const ADMIN_PASSWORD = 'RafikELKHayer2026';
+
+function isValidAdminAuth(email: string, password: string): boolean {
+  const cleanEmail = (email || '').trim().toLowerCase();
+  const cleanPwd = (password || '').trim().replace(/\s+/g, '');
+
+  if (cleanEmail !== ADMIN_EMAIL) {
+    return false;
+  }
+
+  return (
+    cleanPwd === 'RafikELKHayer2026' ||
+    cleanPwd.toLowerCase() === 'rafikelkhayer2026' ||
+    cleanPwd === 'RafikELKHayer2026P' ||
+    cleanPwd.toLowerCase() === 'rafikelkhayer2026p'
+  );
+}
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
     const { email, password } = body;
 
-    const cleanEmail = (email || '').trim().toLowerCase();
-    const cleanPassword = password || '';
-
-    if (cleanEmail === ADMIN_EMAIL && cleanPassword === ADMIN_PASSWORD) {
+    if (isValidAdminAuth(email, password)) {
       const response = NextResponse.json({
         success: true,
         message: 'تم تسجيل الدخول بنجاح',

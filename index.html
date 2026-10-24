@@ -1462,10 +1462,89 @@
       }
     }
 
-    function openAdminModal() {
+        function openAdminModal() {
       const modal = document.getElementById('adminModal');
+      const isLoggedIn = localStorage.getItem('rafik_admin_logged_in') === 'true';
+      const loginView = document.getElementById('adminLoginView');
+      const dashView = document.getElementById('adminDashboardView');
+      
+      if (isLoggedIn) {
+        if (loginView) loginView.classList.add('hidden');
+        if (dashView) dashView.classList.remove('hidden');
+      } else {
+        if (loginView) loginView.classList.remove('hidden');
+        if (dashView) dashView.classList.add('hidden');
+        const err = document.getElementById('adminLoginError');
+        if (err) err.classList.add('hidden');
+      }
       modal.classList.remove('hidden');
       modal.classList.add('flex');
+    }
+
+    function closeAdminModal() {
+      const modal = document.getElementById('adminModal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    function handleAdminLoginSubmit(e) {
+      if (e) e.preventDefault();
+      const emailEl = document.getElementById('adminInputEmail');
+      const pwdEl = document.getElementById('adminInputPassword');
+      const errorEl = document.getElementById('adminLoginError');
+
+      const rawEmail = emailEl ? emailEl.value : '';
+      const rawPwd = pwdEl ? pwdEl.value : '';
+
+      const cleanEmail = rawEmail.trim().toLowerCase();
+      const cleanPwd = rawPwd.trim().replace(/\s+/g, '');
+
+      const isEmailValid = (cleanEmail === 'rafikelkhayer@gmail.com');
+      const isPwdValid = (
+        cleanPwd === 'RafikELKHayer2026' ||
+        cleanPwd.toLowerCase() === 'rafikelkhayer2026' ||
+        cleanPwd === 'RafikELKHayer2026P' ||
+        cleanPwd.toLowerCase() === 'rafikelkhayer2026p'
+      );
+
+      if (isEmailValid && isPwdValid) {
+        localStorage.setItem('rafik_admin_logged_in', 'true');
+        if (errorEl) errorEl.classList.add('hidden');
+        const loginView = document.getElementById('adminLoginView');
+        const dashView = document.getElementById('adminDashboardView');
+        if (loginView) loginView.classList.add('hidden');
+        if (dashView) dashView.classList.remove('hidden');
+      } else {
+        if (errorEl) {
+          errorEl.innerText = 'بيانات الدخول غير صحيحة! يرجى التأكد من البريد الإلكتروني ورمز المرور الخاص بالإدارة.';
+          errorEl.classList.remove('hidden');
+        }
+      }
+    }
+
+    function handleAdminLogout() {
+      localStorage.removeItem('rafik_admin_logged_in');
+      const loginView = document.getElementById('adminLoginView');
+      const dashView = document.getElementById('adminDashboardView');
+      if (dashView) dashView.classList.add('hidden');
+      if (loginView) loginView.classList.remove('hidden');
+      const pwdInput = document.getElementById('adminInputPassword');
+      if (pwdInput) pwdInput.value = '';
+    }
+
+    function toggleAdminPasswordVisibility() {
+      const pwdInput = document.getElementById('adminInputPassword');
+      const eyeIcon = document.getElementById('adminPasswordEyeIcon');
+      if (!pwdInput) return;
+      if (pwdInput.type === 'password') {
+        pwdInput.type = 'text';
+        if (eyeIcon) eyeIcon.className = 'fa-regular fa-eye-slash';
+      } else {
+        pwdInput.type = 'password';
+        if (eyeIcon) eyeIcon.className = 'fa-regular fa-eye';
+      }
     }
 
     function filterPackages() {
